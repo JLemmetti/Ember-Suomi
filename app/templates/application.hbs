@@ -1,3 +1,31 @@
-<h2 id="title">Welcome to Ember</h2>
+<header>
+
+	<h1>Ember Suomi</h1>
+	<h2>Ohjelmistokomponenttikirjasto kunnianhimoisten verkkosovellusten kehittämiseen</h2>
+
+	<nav>
+		{{#link-to 'index'}}Etusivu{{/link-to}}
+		{{#link-to 'articles'}}Artikkelit{{/link-to}}
+		{{!-- {{#link-to 'snippets'}}Koodiesimerkit{{/link-to}} --}}
+		{{#link-to 'about'}}Tietoa sivusta{{/link-to}}
+	</nav>
+
+</header>
+
+<main>
 
 {{outlet}}
+
+</main>
+
+<footer>
+
+	<nav>
+		<ul>
+			<li><a href="https://trello.com/b/KvNkbtLF/ember-suomi">Roadmap</a></li>
+			<li>Ylläpito: <a href="//twitter.com/jlemmetti">Jurkka Lemmetti</a></li>
+		</ul>
+	</nav>
+
+</footer>
+

@@ -1,0 +1,33 @@
+* {box-sizing: border-box;}
+
+::-moz-selection {background: #e1563f; color:#fff; text-shadow: none;}
+::selection {background:#e1563f; color:#fff; text-shadow: none;}
+
+body {
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	margin: 0;
+}
+
+// Remove iOS text size adjust without disabling user zoom: www.456bereastreet.com/hive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/
+html {-webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;}
+
+// Remove margins for navigation lists
+nav ul, nav li {margin: 0; list-style:none; list-style-image: none;}
+
+// Hand cursor on clickable input elements
+label,
+input[type="button"],
+input[type="submit"],
+input[type="image"],
+button {cursor: pointer;}
+
+// Remove extra padding and inner border in Firefox
+input::-moz-focus-inner,
+button::-moz-focus-inner {border: 0; padding: 0;}
+
+.clearfix:before, .clearfix:after {content: ""; display: table;}
+.clearfix:after {clear: both;}

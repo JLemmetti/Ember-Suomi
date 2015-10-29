@@ -5,7 +5,17 @@ body {
 
 	header {
 		outline: 1px solid;
+		padding: 30px 50px;
 	}
+
+	footer {
+		outline: 1px solid;
+		padding: 30px 0;
+	}
+}
+
+article {
+	margin: 50px 40px;
 }
 
 

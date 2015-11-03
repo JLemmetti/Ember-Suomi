@@ -1,5 +1,9 @@
 # Ember-suomi
 
+## Palvelimen asennus
+* Asenna CouchDB
+* Asenna [CORS](https://github.com/pouchdb/add-cors-to-couchdb)
+
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
 

@@ -1,0 +1,25 @@
+{
+	"data": [
+		{
+			"id": 1,
+			"type": "articles",
+			"attributes": {
+				"title": "Eka juttu!",
+				"body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis corrupti cupiditate incidunt soluta recusandae, blanditiis autem quis dignissimos vel, voluptas minus officia optio voluptatibus placeat neque tenetur. Id, tempore, fugit."
+
+			}
+
+		},
+		{
+			"id": 2,
+			"type": "articles",
+			"attributes": {
+				"title": "Toka juttu!",
+				"body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis corrupti cupiditate incidunt soluta recusandae, blanditiis autem quis dignissimos vel, voluptas minus officia optio voluptatibus placeat neque tenetur. Id, tempore, fugit."
+
+			}
+
+		}
+	]
+
+}

@@ -1,10 +1,12 @@
 
 <h1>Artikkelit</h1>
 
-{{#each articles as |article|}}
+{{#each model as |article index|}}
 
-	{{article.title}}
+<p>{{index}}:	{{article.title}}</p>
 
+{{else}}
+<p>Ei artikkeleita :(</p>
 {{/each}}
 
 {{outlet}}

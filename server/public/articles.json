@@ -5,8 +5,10 @@
 			"type": "articles",
 			"attributes": {
 				"title": "Eka juttu!",
-				"body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis corrupti cupiditate incidunt soluta recusandae, blanditiis autem quis dignissimos vel, voluptas minus officia optio voluptatibus placeat neque tenetur. Id, tempore, fugit."
-
+				"lead": "Öri öri",
+				"body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis corrupti cupiditate incidunt soluta recusandae, blanditiis autem quis dignissimos vel, voluptas minus officia optio voluptatibus placeat neque tenetur. Id, tempore, fugit.",
+				"author": "Jurkka Lemmetti",
+				"published": "2015-11-5"
 			}
 
 		},
@@ -15,11 +17,12 @@
 			"type": "articles",
 			"attributes": {
 				"title": "Toka juttu!",
-				"body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis corrupti cupiditate incidunt soluta recusandae, blanditiis autem quis dignissimos vel, voluptas minus officia optio voluptatibus placeat neque tenetur. Id, tempore, fugit."
-
+				"lead": "Öri öri",
+				"body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis corrupti cupiditate incidunt soluta recusandae, blanditiis autem quis dignissimos vel, voluptas minus officia optio voluptatibus placeat neque tenetur. Id, tempore, fugit.",
+				"author": "Jurkka Lemmetti",
+				"published": "2015-11-4",
+				"updated": "2015-11-5"
 			}
-
 		}
 	]
-
 }

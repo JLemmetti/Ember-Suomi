@@ -1,12 +1,16 @@
 
 <h1>Artikkelit</h1>
 
-{{#each model as |article index|}}
+<ul>
+	{{#each model as |article index|}}
 
-<p>{{index}}:	{{article.title}}</p>
+	<h1>{{#link-to 'articles.article' article}}{{article.title}}{{/link-to}}</h1>
+	<h2>{{article.lead}}</h2>
 
-{{else}}
-<p>Ei artikkeleita :(</p>
-{{/each}}
+	{{else}}
+	<p>Ei artikkeleita :(</p>
+	{{/each}}
+</ul>
+
 
 {{outlet}}

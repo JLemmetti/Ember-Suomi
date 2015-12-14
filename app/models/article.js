@@ -6,5 +6,6 @@ export default DS.Model.extend({
 	body: DS.attr('string'),
 	author: DS.attr('string'),
 	published: DS.attr('date'),
-	updated: DS.attr('date')
+	updated: DS.attr('date'),
+	rev: DS.attr('string')
 });

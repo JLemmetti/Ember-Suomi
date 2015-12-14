@@ -1,19 +1,9 @@
 
-<form {{action 'createArticle' on='submit'}}>
-
-<label>Otsikko</label>
-{{input value=title}}
-
-<label>Teksti</label>
-{{input value=body}}
-
-<input type="submit" value="Tallenna">
-
-</form>
-
 <h1>Artikkelit</h1>
 
-<ul>
+{{#link-to 'articles.new'}}Uusi{{/link-to}}
+
+<ul class="article-list">
 	{{#each model as |article index|}}
 
 	<h1>{{#link-to 'articles.article' article}}{{article.title}}{{/link-to}}

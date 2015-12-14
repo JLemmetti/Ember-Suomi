@@ -1,0 +1,21 @@
+<form class="new-article" {{action 'createArticle' model on='submit'}}>
+
+	<input type="submit" value="Tallenna">
+
+	<label>Otsikko</label>
+	{{input value=model.title}}
+
+	<label>Kirjoittaja</label>
+	{{input value=model.author}}
+
+	<label>Ingressi</label>
+	{{textarea cols=100 rows=10 value=model.lead}}
+
+	<label>Teksti</label>
+	{{textarea cols=100 rows=50 value=model.body}}
+
+	<input type="submit" value="Tallenna">
+
+</form>
+
+{{outlet}}

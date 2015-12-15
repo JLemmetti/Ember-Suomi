@@ -8,6 +8,11 @@ export default Ember.Route.extend({
 		saveArticle (article) {
 			article.save()
 			.then(this.transitionTo('articles'));
+		},
+		willTransition () {
+			// Rollback model attributes when transitioning away from this route.
+			// This will not prevet saving new articles
+			this.get('currentModel').rollbackAttributes();
 		}
 	}
 });

@@ -9,6 +9,7 @@
 		{{#if model.updated}}
 			<p>Muokattu {{model.updated}}</p>
 		{{/if}}
+		{{#link-to 'articles.article.edit' model.id}}Muokkaa{{/link-to}} {{model.id}}
 	</div>
 
 	<p>{{model.lead}}</p>

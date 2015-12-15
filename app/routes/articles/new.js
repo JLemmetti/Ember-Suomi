@@ -5,7 +5,7 @@ export default Ember.Route.extend({
 		return this.store.createRecord('article');
 	},
 	actions: {
-		createArticle (article) {
+		saveArticle (article) {
 			article.save()
 			.then(this.transitionTo('articles'));
 		}

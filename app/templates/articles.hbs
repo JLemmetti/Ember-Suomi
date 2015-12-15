@@ -7,8 +7,8 @@
 	{{#each model as |article index|}}
 
 	<article>
-		<h1>{{#link-to 'articles.article' article}}{{article.title}}{{/link-to}}
-			<button {{action 'deleteArticle' article}}>[X]</button>
+		<h1>{{#link-to 'articles.article' article.id}}{{article.title}}{{/link-to}}
+			<button {{action 'deleteArticle' article}}>x</button>
 		</h1>
 		<p>{{article.lead}}</p>
 	</article>

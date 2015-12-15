@@ -16,7 +16,15 @@ body {
 
 .article-list {
 	float: left;
+	width: 300px;
 	outline: 1px solid;
+
+	h1 {
+
+		a {
+			color: #444;
+		}
+	}
 }
 
 .new-article {
@@ -30,7 +38,38 @@ body {
 }
 
 article {
-	margin: 50px 40px;
+
 }
 
+.fullArticle {
+	float: left;
+	width: 50%;
+	margin: 50px 40px;
 
+	.meta {
+		background-color: #eee;
+		padding: 5px 25px;
+	}
+}
+
+footer {
+	clear: both;
+}
+
+a {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+button,
+input[type='submit'] {
+	background-color: #55f;
+	color: #eee;
+	font-size: 16px;
+	padding: 4px 6px;
+	border: 1px solid rgba(0, 0, 0, .1);
+	border-radius: 4px;
+}

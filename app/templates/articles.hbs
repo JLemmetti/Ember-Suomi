@@ -6,10 +6,12 @@
 <ul class="article-list">
 	{{#each model as |article index|}}
 
-	<h1>{{#link-to 'articles.article' article}}{{article.title}}{{/link-to}}
-		<button {{action 'deleteArticle' article}}>[X]</button>
-	</h1>
-	<h2>{{article.lead}}</h2>
+	<article>
+		<h1>{{#link-to 'articles.article' article}}{{article.title}}{{/link-to}}
+			<button {{action 'deleteArticle' article}}>[X]</button>
+		</h1>
+		<p>{{article.lead}}</p>
+	</article>
 
 	{{else}}
 	<p>Ei artikkeleita :(</p>

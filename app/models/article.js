@@ -7,5 +7,6 @@ export default DS.Model.extend({
 	author: DS.attr('string', {defaultValue: 'Jurkka Lemmetti'}),
 	published: DS.attr('date'),
 	updated: DS.attr('date'),
+	released: DS.attr('boolean', {defaultValue: false}),
 	rev: DS.attr('string')
 });

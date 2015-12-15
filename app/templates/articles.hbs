@@ -1,14 +1,16 @@
 
 <h1>Artikkelit</h1>
 
-{{#link-to 'articles.new'}}Uusi{{/link-to}}
+{{#link-to 'articles.new' class='ui-button'}}Uusi{{/link-to}}
 
 <ul class="article-list">
 	{{#each model as |article index|}}
 
 	<article>
 		<h1>{{#link-to 'articles.article' article.id}}{{article.title}}{{/link-to}}
-			<button {{action 'deleteArticle' article}}>x</button>
+			{{#if article.id}}
+				<button {{action 'deleteArticle' article}}>x</button>
+			{{/if}}
 		</h1>
 		<p>{{article.lead}}</p>
 	</article>

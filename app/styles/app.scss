@@ -33,7 +33,8 @@ body {
 
 	label {
 		display: block;
-		font-size: 18px;
+		font-size: 20px;
+		margin: 20px 0 5px;
 	}
 }
 
@@ -65,11 +66,22 @@ a {
 }
 
 button,
-input[type='submit'] {
+input[type='submit'],
+.ui-button {
 	background-color: #55f;
 	color: #eee;
 	font-size: 16px;
 	padding: 4px 6px;
 	border: 1px solid rgba(0, 0, 0, .1);
+	border-radius: 4px;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+	background-color: #eee;
+	font-size: 16px;
+	padding: 3px 10px;
+	border: 2px solid rgba(0, 0, 0, .1);
 	border-radius: 4px;
 }

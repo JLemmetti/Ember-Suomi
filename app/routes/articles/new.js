@@ -7,7 +7,7 @@ export default Ember.Route.extend({
 	actions: {
 		saveArticle (article) {
 			article.save()
-			.then(this.transitionTo('articles'));
+			.then(article => this.transitionTo('articles.article', article.id));
 		},
 		willTransition () {
 			// Rollback model attributes when transitioning away from this route.

@@ -29,7 +29,8 @@ module.exports = function(environment) {
     moment: {
       allowEmpty: true,
       outputFormat: 'L',
-      includeLocales: ['Fi']
+      // Remember when updating this you need to restart the dev server
+      includeLocales: ['fi']
     }
   };
 

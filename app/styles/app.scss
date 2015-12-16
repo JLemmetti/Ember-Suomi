@@ -20,10 +20,19 @@ body {
 	outline: 1px solid;
 
 	h1 {
+		margin: 20px auto 0;
 
 		a {
 			color: #444;
 		}
+	}
+
+	p {
+		margin: 0;
+	}
+
+	.date {
+		font-size: 14px;
 	}
 }
 

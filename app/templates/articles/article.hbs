@@ -5,9 +5,9 @@
 
 	<div class="meta">
 		<p>Kirjoittaja {{model.author}}</p>
-		<p>Julkaistu {{model.published}}</p>
+		<p>Julkaistu {{moment-format model.published}} ({{moment-from-now model.published}})</p>
 		{{#if model.updated}}
-			<p>Muokattu {{model.updated}}</p>
+			<p>Muokattu {{moment-format model.updated}} ({{moment-from-now model.updated}})</p>
 		{{/if}}
 		{{#link-to 'articles.article.edit' model.id}}Muokkaa{{/link-to}}
 	</div>

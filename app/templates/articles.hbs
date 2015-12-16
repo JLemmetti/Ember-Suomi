@@ -12,6 +12,7 @@
 				<button {{action 'deleteArticle' article}}>x</button>
 			{{/if}}
 		</h1>
+		<p class="date">{{moment-format article.published}}</p>
 		<p>{{article.lead}}</p>
 	</article>
 

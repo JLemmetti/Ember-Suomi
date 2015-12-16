@@ -4,7 +4,7 @@
 {{#link-to 'articles.new' class='ui-button'}}Uusi{{/link-to}}
 
 <ul class="article-list">
-	{{#each model as |article index|}}
+	{{#each sorted as |article index|}}
 
 	<article>
 		<h1>{{#link-to 'articles.article' article.id}}{{article.title}}{{/link-to}}

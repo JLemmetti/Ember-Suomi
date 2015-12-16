@@ -56,14 +56,35 @@ article {
 	width: 50%;
 	margin: 50px 40px;
 
+	h1 {
+		font-size: 30px;
+		margin: 0 auto 20px;
+	}
+
+	p {
+		font-size: 18px;
+	}
+
 	.meta {
 		background-color: #eee;
 		padding: 5px 25px;
+	}
+
+	.lead {
+		font-size: 20px;
 	}
 }
 
 footer {
 	clear: both;
+	height: 100px;
+
+	li {
+		float: left;
+		font-size: 20px;
+		line-height: 1.5;
+		margin: 0 20px;
+	}
 }
 
 a {

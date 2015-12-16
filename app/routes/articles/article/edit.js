@@ -9,6 +9,9 @@ export default Ember.Route.extend({
 	},
 	actions: {
 		saveArticle (article) {
+
+			article.set('updated', new Date());
+
 			article.save()
 			.then(this.transitionTo('articles.article'));
 		}

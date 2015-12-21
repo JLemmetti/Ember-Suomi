@@ -4,6 +4,12 @@ export default Ember.Route.extend({
 	model () {
 		return this.store.createRecord('article');
 	},
+	renderTemplate () {
+		this._super(...arguments);
+		this.render('articles/new', {
+			into: 'application'
+		});
+	},
 	actions: {
 		saveArticle (article) {
 			article.save()

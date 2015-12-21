@@ -6,7 +6,7 @@ body {
 
 	header {
 		outline: 1px solid;
-		padding: 30px 50px;
+		padding: 20px 50px;
 	}
 
 	footer {
@@ -19,10 +19,48 @@ code {
 	white-space: pre-wrap;
 }
 
+.main-nav {
+	// background-color: $main-nav-bg-color;
+	// outline: 1px solid;
+	margin: 20px 0 10px;
+
+	a {
+		color: $main-nav-link-color;
+		font-size: 22px;
+		margin: 0 30px 0 0;
+	}
+}
+
+.static-page {
+	max-width: 800px;
+	background-color: #ddd;
+	padding: 50px 30px;
+	margin: 30px auto;
+
+	h1 {
+
+	}
+
+	h2 {
+		margin: 30px 0 0;
+	}
+
+	p {
+		font-size: 18px;
+		margin: 8px 0;
+	}
+}
+
 .article-list {
-	float: left;
-	width: 300px;
+	max-width: 80%;
+	list-style-type: none;
+	padding: 20px 30px;
+	margin: 50px auto;
 	outline: 1px solid;
+
+	li {
+		margin: 0 0 40px;
+	}
 
 	h1 {
 		margin: 20px auto 0;
@@ -42,7 +80,7 @@ code {
 }
 
 .new-article {
-	width: 50%;
+	max-width: 800px;
 	margin: 0 auto;
 
 	label {
@@ -56,10 +94,9 @@ article {
 
 }
 
-.fullArticle {
-	float: left;
-	width: 50%;
-	margin: 50px 40px;
+.full-article {
+	max-width: 800px;
+	margin: 50px auto;
 
 	h1 {
 		font-size: 30px;
@@ -115,6 +152,10 @@ input[type='submit'],
 	padding: 4px 8px;
 	border: 1px solid $button-border-color;
 	border-radius: 4px;
+
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 input[type="text"],

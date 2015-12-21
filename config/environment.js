@@ -14,8 +14,8 @@ module.exports = function(environment) {
     },
 
     APP: {
-      // Here you can pass flags/options to your application instance
-      // when it is created
+      remoteDB: 'ember_suomi_test',
+      localDB: 'local_pouch_test'
     },
     contentSecurityPolicy: {
       'default-src': "'none'",
@@ -55,7 +55,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.APP.remoteDB = 'ember_suomi';
+    ENV.APP.localDB = 'local_pouch';
   }
 
   return ENV;

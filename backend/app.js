@@ -10,7 +10,7 @@ app.use(cors());
 //app.use(express.compress());
 
 app.get('*', function (req, res) {
-	res.sendfile('./public/index.html');
+	res.sendFile('/index.html', {root: './public'});
 });
 
 var server = app.listen(3000, function () {

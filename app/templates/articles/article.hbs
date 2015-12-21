@@ -5,7 +5,7 @@
 
 	<div class="meta">
 		<p>Kirjoittaja {{model.author}}</p>
-		<p>{{moment-format model.published}} ({{moment-from-now model.published}})</p>
+		<p>Julkaistu {{moment-format model.published}} ({{moment-from-now model.published}})</p>
 		{{#if model.updated}}
 			<p>Muokattu {{moment-format model.updated}} ({{moment-from-now model.updated}})</p>
 		{{/if}}

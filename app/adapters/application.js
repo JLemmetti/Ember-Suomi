@@ -1,5 +1,5 @@
 import PouchDB from 'pouchdb';
-import { Adapter } from 'ember-pouch';
+import {Adapter} from 'ember-pouch';
 import config from '../config/environment';
 
 // PouchDB.debug.enable('*');

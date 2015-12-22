@@ -1,5 +1,6 @@
 @import 'base.scss';
 @import 'theme.scss';
+@import 'ember-power-select';
 
 body {
 	font-family: Tahoma, Verdana, Segoe, sans-serif;
@@ -130,6 +131,25 @@ article {
 	.lead {
 		font-size: 20px;
 		padding: 15px 0;
+	}
+}
+
+.author-list {
+	max-width: 80%;
+	list-style-type: none;
+	padding: 20px 30px;
+	margin: 50px auto;
+	outline: 1px solid;
+
+	li {
+		margin: 0 0 40px;
+	}
+
+	.meta {
+		p {
+			float: left;
+			margin: 0 10px;
+		}
 	}
 }
 

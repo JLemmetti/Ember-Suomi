@@ -1,0 +1,37 @@
+
+<h1>Kirjoittajat {{#link-to 'authors.new' class='ui-button'}}Uusi kirjoittaja{{/link-to}}</h1>
+
+<ul class="author-list">
+	{{#each model as |author index|}}
+
+	<li class="clearfix">
+		<article>
+			<h1>{{author.name}}
+				{{#if author.id}}
+					<button {{action 'deleteAuthor' author}}>x</button>
+				{{/if}}
+			</h1>
+
+			<p>{{author.bio}}</p>
+
+			<div class="meta">
+				{{#if author.twitter}}
+					<p>{{author.twitter}}</p>
+				{{/if}}
+				{{#if author.email}}
+					<p>{{author.email}}</p>
+				{{/if}}
+				{{#if author.github}}
+					<p>{{author.github}}</p>
+				{{/if}}
+			</div>
+
+		</article>
+	</li>
+
+	{{else}}
+	<p>Ei kirjoittajia :(</p>
+	{{/each}}
+</ul>
+
+{{outlet}}

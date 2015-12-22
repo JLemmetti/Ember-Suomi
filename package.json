@@ -42,6 +42,7 @@
     "ember-export-application-global": "^1.0.4",
     "ember-moment": "4.2.1",
     "ember-pouch": "3.0.0",
+    "ember-power-select": "0.7.2",
     "ember-resolver": "2.0.3"
   }
 }

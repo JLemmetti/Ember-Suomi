@@ -3,7 +3,16 @@
 
 	<h1>{{model.title}}</h1>
 
-	<div class="meta">
+	<div class="meta clearfix">
+
+		<figure class="avatar">
+			{{gravatar-image
+			email='jurkka.lemmetti@gmail.com'
+			alt='Jurkka Lemmetti'
+			defaultImage='mm'
+			size=100}}
+		</figure>
+
 		<p>Kirjoittaja {{model.author}}</p>
 		<p>Julkaistu {{moment-format model.published}} ({{moment-from-now model.published}})</p>
 		{{#if model.updated}}

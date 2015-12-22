@@ -22,7 +22,7 @@ module.exports = function(environment) {
       'script-src': "'self'",
       'font-src': "'self'",
       'connect-src': "'self' http://localhost:5984 blob:",
-      'img-src': "'self'",
+      'img-src': "'self' www.gravatar.com",
       'style-src': "'self'",
       'media-src': "'self'"
     },

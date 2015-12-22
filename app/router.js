@@ -5,15 +5,21 @@ const Router = Ember.Router.extend({
     location: config.locationType
 });
 
-Router.map(function() {
-    this.route('articles', function () {
-      this.route('article', {path: ':id'}, function () {
-        this.route('edit');
-      });
-      this.route('new');
+Router.map(function () {
+
+  this.route('articles', function () {
+    this.route('article', {path: ':id'}, function () {
+      this.route('edit');
     });
-    this.route('about');
-    this.route('snippets');
+    this.route('new');
+  });
+
+  this.route('authors', function () {
+    this.route('new');
+  });
+
+  this.route('about');
+  this.route('snippets');
 
 });
 

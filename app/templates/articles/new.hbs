@@ -6,7 +6,12 @@
 	{{input value=model.title}}
 
 	<label>Kirjoittaja</label>
-	{{input value=model.author}}
+	{{#power-select
+	options=authors
+	selected=model.author
+	onchange=(action 'selectAuthor') as |author|}}
+		{{author.name}}
+	{{/power-select}}
 
 	<label>Ingressi</label>
 	{{textarea cols=100 rows=4 value=model.lead}}

@@ -1,20 +1,21 @@
 <form class="new-author" {{action 'saveAuthor' model on='submit'}}>
 
-	<input type="submit" value="Tallenna">
-
 	<label>Nimi</label>
 	{{input value=model.name}}
 
 	<label>Twitter</label>
 	{{input value=model.twitter}}
 
+	<label>Github</label>
+	{{input value=model.github}}
+
 	<label>Sähköposti</label>
 	{{input value=model.email}}
 
+	<input type="submit" value="Tallenna">
+
 	<label>Esittely</label>
 	{{textarea cols=100 rows=10 value=model.bio}}
-
-	<input type="submit" value="Tallenna">
 
 </form>
 

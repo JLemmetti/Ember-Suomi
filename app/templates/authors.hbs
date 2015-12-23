@@ -1,32 +1,44 @@
 
 <h1>Kirjoittajat {{#link-to 'authors.new' class='ui-button'}}Uusi kirjoittaja{{/link-to}}</h1>
 
+{{outlet}}
+
 <ul class="author-list">
 	{{#each model as |author index|}}
 
 	<li class="clearfix">
-		<article>
+		<section>
+
+			<figure class="avatar">
+				{{gravatar-image
+				email=author.email
+				alt=author.name
+				defaultImage='mm'
+				size=150
+				retina=true}}
+			</figure>
+
 			<h1>{{author.name}}
 				{{#if author.id}}
 					<button {{action 'deleteAuthor' author}}>x</button>
 				{{/if}}
 			</h1>
 
-			<p>{{author.bio}}</p>
+			{{markdown-to-html markdown=author.bio class='bio'}}
 
 			<div class="meta">
 				{{#if author.twitter}}
-					<p>{{author.twitter}}</p>
+					<p><a href="https://twitter.com/{{author.twitter}}">{{author.twitter}}</a></p>
 				{{/if}}
 				{{#if author.email}}
-					<p>{{author.email}}</p>
+					<p><a href="mailto:{{author.email}}">{{author.email}}</a></p>
 				{{/if}}
 				{{#if author.github}}
-					<p>{{author.github}}</p>
+					<p><a href="https://github.com/{{author.github}}">Github</a></p>
 				{{/if}}
 			</div>
 
-		</article>
+		</section>
 	</li>
 
 	{{else}}
@@ -34,4 +46,3 @@
 	{{/each}}
 </ul>
 
-{{outlet}}

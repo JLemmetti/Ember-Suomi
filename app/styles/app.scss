@@ -134,6 +134,20 @@ article {
 	}
 }
 
+.new-author {
+	max-width: 80%;
+	margin: 50px auto;
+
+	textarea {
+		display: block;
+		margin: 20px auto;
+	}
+
+	input[type='submit'] {
+		float: right;
+	}
+}
+
 .author-list {
 	max-width: 80%;
 	list-style-type: none;
@@ -145,10 +159,30 @@ article {
 		margin: 0 0 40px;
 	}
 
+	h1 {
+		margin: 20px 0 0 180px;
+	}
+
+	.avatar {
+		float: left;
+		margin: 0 5px;
+
+		img {
+			border: 1px solid rgba(0, 0, 0, .1);
+			border-radius: 50%;
+		}
+	}
+
+	.bio {
+		margin: 10px 10px 10px 180px;
+	}
+
 	.meta {
+		margin: 0 10px 0 180px;
+
 		p {
 			float: left;
-			margin: 0 10px;
+			margin: 0 10px 0 0;
 		}
 	}
 }

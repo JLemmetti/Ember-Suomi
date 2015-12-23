@@ -4,11 +4,11 @@
 
 	<label>Otsikko</label>
 	{{input value=model.title}}
-
+{{selectedAuthor}}
 	<label>Kirjoittaja</label>
 	{{#power-select
 	options=authors
-	selected=model.author
+	selected=selectedAuthor
 	onchange=(action 'selectAuthor') as |author|}}
 		{{author.name}}
 	{{/power-select}}

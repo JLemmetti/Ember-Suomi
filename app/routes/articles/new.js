@@ -2,7 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 	model () {
-		return this.store.createRecord('article');
+		return Ember.RSVP.hash({
+			article: this.store.createRecord('article'),
+			authors: this.store.findAll('author')
+		});
 	},
 	renderTemplate () {
 		this._super(...arguments);
@@ -12,13 +15,10 @@ export default Ember.Route.extend({
 	},
 	actions: {
 		saveArticle (article) {
+			let author = article.get('author');
+			article.set('author', author);
 			article.save()
 			.then(article => this.transitionTo('articles.article', article.id));
-		},
-		willTransition () {
-			// Rollback model attributes when transitioning away from this route.
-			// This will not prevet saving new articles
-			this.get('currentModel').rollbackAttributes();
 		}
 	}
 });

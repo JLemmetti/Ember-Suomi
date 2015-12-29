@@ -4,14 +4,13 @@ export default Ember.Route.extend({
 	renderTemplate () {
 		this._super(...arguments);
 		this.render('articles/new', {
-			into: 'application'
+			into: 'application',
+			controller: this.controllerFor('articles.article')
 		});
 	},
 	actions: {
 		saveArticle (article) {
-
 			article.set('updated', new Date());
-
 			article.save()
 			.then(this.transitionTo('articles.article'));
 		}

@@ -1,8 +1,6 @@
 
 <h1>Artikkelit {{#link-to 'articles.new' class='ui-button'}}Uusi artikkeli{{/link-to}}</h1>
 
-
-
 <ul class="article-list">
 	{{#each sorted as |article index|}}
 
@@ -14,6 +12,7 @@
 				{{/if}}
 			</h1>
 			<p class="date">{{moment-format article.published}}</p>
+			<p>{{article.author.name}}</p>
 			<p>{{article.lead}}</p>
 		</article>
 	</li>

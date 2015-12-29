@@ -1,29 +1,29 @@
 
 <article class="full-article">
 
-	<h1>{{model.title}} {{#link-to 'articles.article.edit' model.id class='ui-button'}}Muokkaa{{/link-to}}</h1>
+	<h1>{{model.article.title}} {{#link-to 'articles.article.edit' model.article.id class='ui-button'}}Muokkaa{{/link-to}}</h1>
 
 	<div class="meta clearfix">
 
 		<figure class="avatar">
 			{{gravatar-image
-			email=model.author.email
-			alt=model.author.name
+			email=model.article.author.email
+			alt=model.article.author.name
 			defaultImage='mm'
 			size=100}}
 		</figure>
 
-		<p>Kirjoittaja {{model.author.name}}</p>
-		<p>Julkaistu {{moment-format model.published}} ({{moment-from-now model.published}})</p>
-		{{#if model.updated}}
-			<p>Muokattu {{moment-format model.updated}} ({{moment-from-now model.updated}})</p>
+		<p>Kirjoittaja {{model.article.author.name}}</p>
+		<p>Julkaistu {{moment-format model.article.published}} ({{moment-from-now model.article.published}})</p>
+		{{#if model.article.updated}}
+			<p>Muokattu {{moment-format model.article.updated}} ({{moment-from-now model.article.updated}})</p>
 		{{/if}}
 
 	</div>
 
-	<p class="lead">{{model.lead}}</p>
+	<p class="lead">{{model.article.lead}}</p>
 
-	{{markdown-to-html markdown=model.body}}
+	{{markdown-to-html markdown=model.article.body}}
 
 	{{outlet}}
 

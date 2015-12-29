@@ -1,23 +1,23 @@
-<form class="new-article" {{action 'saveArticle' model on='submit'}}>
+<form class="new-article" {{action 'saveArticle' model.article on='submit'}}>
 
 	<input type="submit" value="Tallenna">
 
 	<label>Otsikko</label>
-	{{input value=model.title}}
-{{selectedAuthor}}
+	{{input value=model.article.title}}
+
 	<label>Kirjoittaja</label>
 	{{#power-select
-	options=authors
-	selected=selectedAuthor
+	options=model.authors
+	selected=model.article.author
 	onchange=(action 'selectAuthor') as |author|}}
 		{{author.name}}
 	{{/power-select}}
 
 	<label>Ingressi</label>
-	{{textarea cols=100 rows=4 value=model.lead}}
+	{{textarea cols=100 rows=4 value=model.article.lead}}
 
 	<label>Teksti</label>
-	{{textarea cols=100 rows=40 value=model.body}}
+	{{textarea cols=100 rows=40 value=model.article.body}}
 
 	<input type="submit" value="Tallenna">
 

@@ -8,15 +8,19 @@ const Router = Ember.Router.extend({
 Router.map(function () {
 
   this.route('articles', function () {
+    this.route('new');
     this.route('article', {path: ':id'}, function () {
       this.route('edit');
     });
-    this.route('new');
   });
 
   this.route('authors', function () {
     this.route('new');
+    this.route('author', {path: ':id'}, function () {
+      this.route('edit');
+    });
   });
+
 
   this.route('about');
   this.route('snippets');

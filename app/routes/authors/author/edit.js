@@ -4,13 +4,14 @@ export default Ember.Route.extend({
 	renderTemplate () {
 		this._super(...arguments);
 		this.render('authors/new', {
-			// into: 'application'
+			into: 'application',
+			controller: this.controllerFor('authors.author')
 		});
 	},
 	actions: {
 		saveAuthor (author) {
 			author.save()
-			.then(author => this.transitionTo('authors'));
+			.then(this.transitionTo('authors'));
 		},
 		willTransition () {
 			// Rollback model attributes when transitioning away from this route.

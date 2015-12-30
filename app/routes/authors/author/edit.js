@@ -1,6 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+	titleToken (model) {
+		return 'Muokkaa tietoja: ' + model.get('name');
+	},
 	renderTemplate () {
 		this._super(...arguments);
 		this.render('authors/new', {

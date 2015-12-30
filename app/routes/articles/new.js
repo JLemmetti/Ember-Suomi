@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+	titleToken: 'Uusi artikkeli',
 	model () {
 		return Ember.RSVP.hash({
 			article: this.store.createRecord('article'),

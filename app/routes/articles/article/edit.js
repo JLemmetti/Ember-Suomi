@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+	titleToken: 'Muokkaa artikkelia',
 	renderTemplate () {
 		this._super(...arguments);
 		this.render('articles/new', {

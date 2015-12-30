@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+	titleToken: 'Kirjoittajat',
 	model () {
 		return this.store.findAll('author');
 	},

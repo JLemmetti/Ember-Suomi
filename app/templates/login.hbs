@@ -1,0 +1,18 @@
+
+<section class="login">
+	<h1>Ember suomi</h1>
+	<h2>kirjautuminen</h2>
+
+	<form class="login-form" {{action 'login' model on='submit'}}>
+
+		<label>Nimi</label>
+		{{input value=username}}
+
+		<label>Salasana</label>
+		{{input value=password type='password'}}
+
+		<input type="submit" value="Kirjaudu">
+
+	</form>
+
+</section>

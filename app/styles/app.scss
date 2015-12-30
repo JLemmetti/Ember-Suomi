@@ -39,6 +39,27 @@ main {
 	}
 }
 
+.login {
+	max-width: 800px;
+	margin: 50px auto;
+
+	h1 {
+		font-size: 40px;
+		margin: 0 auto 5px;
+	}
+
+	h2 {
+		font-size: 30px;
+		margin: 0 auto 20px;
+	}
+
+	label {
+		display: block;
+		font-size: 20px;
+		margin: 10px auto 2px;
+	}
+}
+
 .static-page {
 	max-width: 800px;
 	background-color: #ddd;

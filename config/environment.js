@@ -1,4 +1,5 @@
 /* jshint node: true */
+/* eslint indent: [2, 2] */
 
 module.exports = function(environment) {
   var ENV = {

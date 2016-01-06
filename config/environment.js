@@ -19,13 +19,13 @@ module.exports = function(environment) {
       localDB: 'local_pouch_test'
     },
     contentSecurityPolicy: {
-      'default-src': "'none'",
-      'script-src': "'self'",
-      'font-src': "'self'",
-      'connect-src': "'self' http://localhost:5984 blob:",
-      'img-src': "'self' www.gravatar.com",
-      'style-src': "'self'",
-      'media-src': "'self'"
+      'default-src': `'none'`,
+      'script-src': `'self'`,
+      'font-src': `'self'`,
+      'connect-src': `'self' http://localhost:5984 blob:`,
+      'img-src': `'self' www.gravatar.com`,
+      'style-src': `'self'`,
+      'media-src': `'self'`
     },
     moment: {
       allowEmpty: true,

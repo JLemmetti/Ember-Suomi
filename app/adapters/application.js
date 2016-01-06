@@ -13,5 +13,7 @@ db.sync(remote, {
 });
 
 export default Adapter.extend({
-	db: db
+	// TODO: Figure out why local DB fails to populate stuff
+	// from remote DB when the page is loaded for the first time
+	db: remote
 });

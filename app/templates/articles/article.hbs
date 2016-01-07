@@ -23,7 +23,7 @@
 
 	<p class="lead">{{model.article.lead}}</p>
 
-	{{markdown-to-html markdown=model.article.body}}
+	{{format-markdown model.article.body}}
 
 	{{outlet}}
 

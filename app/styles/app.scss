@@ -1,5 +1,6 @@
 @import 'base.scss';
 @import 'theme.scss';
+@import 'monokai-sublime.scss';
 @import 'ember-power-select';
 
 body {
@@ -16,8 +17,11 @@ body {
 	}
 }
 
-code {
-	white-space: pre-wrap;
+pre {
+
+	code {
+		font-size: 1.3em;
+	}
 }
 
 .main-nav {

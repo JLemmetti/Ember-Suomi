@@ -1,6 +1,7 @@
 import Ember from 'ember';
+import KeyboardShortcuts from 'ember-keyboard-shortcuts/mixins/route';
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(KeyboardShortcuts, {
 	titleToken: 'Muokkaa artikkelia',
 	renderTemplate () {
 		this._super(...arguments);
@@ -14,6 +15,14 @@ export default Ember.Route.extend({
 			article.set('updated', new Date());
 			article.save()
 			.then(this.transitionTo('articles.article'));
+		},
+		quickSave () {
+			this.send('saveArticle', this.controllerFor('articles.article').get('model.article'));
+		}
+	},
+	keyboardShortcuts: {
+		'mod+s': {
+			action: 'quickSave'
 		}
 	}
 });

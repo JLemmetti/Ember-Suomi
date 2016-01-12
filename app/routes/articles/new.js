@@ -1,6 +1,7 @@
 import Ember from 'ember';
+import KeyboardShortcuts from 'ember-keyboard-shortcuts/mixins/route';
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(KeyboardShortcuts, {
 	titleToken: 'Uusi artikkeli',
 	model () {
 		return Ember.RSVP.hash({
@@ -16,10 +17,20 @@ export default Ember.Route.extend({
 	},
 	actions: {
 		saveArticle (article) {
+
 			let author = article.get('author');
+
 			article.set('author', author);
 			article.save()
 			.then(article => this.transitionTo('articles.article', article.id));
+		},
+		quickSave () {
+			this.send('saveArticle', this.controllerFor('articles.new').get('model.article'));
+		}
+	},
+	keyboardShortcuts: {
+		'mod+s': {
+			action: 'quickSave'
 		}
 	}
 });

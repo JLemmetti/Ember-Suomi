@@ -2,7 +2,7 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
 	// Using plural here breaks stuff in weird ways
-	article: DS.hasMany('article'),
+	article: DS.hasMany(),
 
 	name: DS.attr('string'),
 	twitter: DS.attr('string'),

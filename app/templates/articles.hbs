@@ -1,7 +1,9 @@
 
 <h1>Artikkelit {{#link-to 'articles.new' class='ui-button'}}Uusi artikkeli{{/link-to}}</h1>
 
+{{#memory-scroll key='sepot'}}
 <ul class="article-list">
+
 	{{#each sorted as |article index|}}
 
 	<li>
@@ -20,7 +22,8 @@
 	{{else}}
 	<p>Ei artikkeleita :(</p>
 	{{/each}}
-</ul>
 
+</ul>
+{{/memory-scroll}}
 
 {{outlet}}

@@ -48,6 +48,7 @@
     "ember-resolver": "^2.0.3",
     "liquid-fire": "0.23.0",
     "loader.js": "^4.0.0",
-    "markdown-code-highlighting": "0.0.6"
+    "markdown-code-highlighting": "0.0.6",
+    "memory-scroll": "0.2.0"
   }
 }

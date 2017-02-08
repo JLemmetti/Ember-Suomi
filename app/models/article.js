@@ -10,6 +10,5 @@ export default DS.Model.extend({
 		return new Date();
 	}}),
 	updated: DS.attr('date'),
-	released: DS.attr('boolean', {defaultValue: false}),
-	rev: DS.attr('string')
+	released: DS.attr('boolean', {defaultValue: false})
 });

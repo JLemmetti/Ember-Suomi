@@ -8,6 +8,5 @@ export default DS.Model.extend({
 	twitter: DS.attr('string'),
 	email: DS.attr('string'),
 	github: DS.attr('string'),
-	bio: DS.attr('string'),
-	rev: DS.attr('string')
+	bio: DS.attr('string')
 });

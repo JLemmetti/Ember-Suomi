@@ -17,19 +17,24 @@ module.exports = function(environment) {
         Date: false
       }
     },
-
     APP: {
-      remoteDB: 'ember_suomi_test',
-      localDB: 'local_pouch_test'
     },
     contentSecurityPolicy: {
       'default-src': `'none'`,
-      'script-src': `'self'`,
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
       'font-src': `'self'`,
-      'connect-src': `'self' http://localhost:5984 blob:`,
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com",
       'img-src': `'self' www.gravatar.com`,
       'style-src': `'self'`,
       'media-src': `'self'`
+    },
+    firebase: {
+      apiKey: "AIzaSyA8c9YnuZKMXyrp2Vwdhb5rRrepj7EOWJE",
+      authDomain: "ember-suomi-dev.firebaseapp.com",
+      databaseURL: "https://ember-suomi-dev.firebaseio.com",
+      storageBucket: "ember-suomi-dev.appspot.com",
+      messagingSenderId: "995971842197"
     },
     moment: {
       allowEmpty: true,

@@ -1,21 +1,21 @@
-<form class="new-author" {{action 'saveAuthor' model on='submit'}}>
+<form class="new-author clearfix" {{action 'saveAuthor' model on='submit'}}>
 
 	<label>Nimi</label>
-	{{input value=model.name}}
+	{{input size=30 value=model.name}}
 
 	<label>Twitter</label>
-	{{input value=model.twitter}}
+	{{input size=30 value=model.twitter}}
 
 	<label>Github</label>
-	{{input value=model.github}}
+	{{input size=30 value=model.github}}
 
 	<label>Sähköposti</label>
-	{{input value=model.email}}
-
-	<input type="submit" value="Tallenna">
+	{{input size=30 value=model.email}}
 
 	<label>Esittely</label>
 	{{textarea cols=100 rows=10 value=model.bio}}
+
+	<input type="submit" value="Tallenna">
 
 </form>
 

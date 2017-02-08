@@ -174,15 +174,37 @@ article {
 
 .new-author {
 	max-width: 80%;
-	margin: 50px auto;
+	padding: 50px 0;
+	margin: 0 auto;
+
+	label,
+	input[type='text'] {
+		margin: 5px 0;
+		height: 30px;
+	}
+
+	label {
+		float: left;
+		clear: left;
+		width: 120px;
+		line-height: 30px;
+	}
+
+	input[type='text'] {
+		float: left;
+
+		// line-height: 1.5;
+	}
 
 	textarea {
-		display: block;
-		margin: 20px auto;
+		float: left;
+		margin: 5px 0 20px;
+		max-width: 90%;
 	}
 
 	input[type='submit'] {
-		float: right;
+		float: left;
+		clear: left;
 	}
 }
 

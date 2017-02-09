@@ -1,8 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-	// Using plural here breaks stuff in weird ways
-	article: DS.hasMany(),
+	articles: DS.hasMany({async: true, inverse: null}),
 
 	name: DS.attr('string'),
 	twitter: DS.attr('string'),

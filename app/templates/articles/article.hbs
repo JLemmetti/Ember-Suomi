@@ -2,7 +2,12 @@
 {{remember-document-scroll key='model.id'}}
 <article class="full-article">
 
-	<h1>{{model.article.title}} {{#link-to 'articles.article.edit' model.article.id class='ui-button'}}Muokkaa{{/link-to}}</h1>
+	<h1>
+		{{model.article.title}}
+		{{#unless model.article.released}}
+			<span class="unreleased">Ei julkaistu</span>
+		{{/unless}}
+		{{#link-to 'articles.article.edit' model.article.id class='ui-button'}}Muokkaa{{/link-to}}</h1>
 
 	<div class="meta clearfix">
 

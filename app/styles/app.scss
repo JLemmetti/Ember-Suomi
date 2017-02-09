@@ -99,6 +99,10 @@ main {
 
 	li {
 		margin: 0 0 40px;
+
+		&.unreleased {
+			opacity: .5;
+		}
 	}
 
 	h1 {

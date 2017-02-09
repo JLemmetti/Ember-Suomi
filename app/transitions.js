@@ -1,5 +1,5 @@
 export default function () {
-	this.transition(
-		this.use('fade', {duration: 150})
-	);
+	// this.transition(
+	// 	this.use('fade', {duration: 150})
+	// );
 }

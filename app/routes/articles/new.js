@@ -23,7 +23,6 @@ export default Ember.Route.extend(KeyboardShortcuts, {
 			article.set('author', author);
 
 			article.save()
-				.then(article => author.set('article', article))
 				.then(article => this.transitionTo('articles.article', article.id));
 		},
 		quickSave () {

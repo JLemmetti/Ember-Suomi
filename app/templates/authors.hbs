@@ -1,5 +1,9 @@
 
-<h1>Kirjoittajat {{#link-to 'authors.new' class='ui-button'}}Uusi kirjoittaja{{/link-to}}</h1>
+<h1>Kirjoittajat
+{{#if session.isAuthenticated}}
+	{{#link-to 'authors.new' class='ui-button'}}Uusi kirjoittaja{{/link-to}}
+{{/if}}
+</h1>
 
 {{outlet}}
 
@@ -19,7 +23,7 @@
 			</figure>
 
 			<h1>{{author.name}}
-				{{#if author.id}}
+				{{#if session.isAuthenticated}}
 					<button {{action 'deleteAuthor' author}}>x</button>
 					{{#link-to 'authors.author.edit' author.id class='ui-button'}}Muokkaa{{/link-to}}
 				{{/if}}

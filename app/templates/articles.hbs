@@ -1,5 +1,9 @@
 
-<h1>Artikkelit {{#link-to 'articles.new' class='ui-button'}}Uusi artikkeli{{/link-to}}</h1>
+<h1>Artikkelit
+	{{#if session.isAuthenticated}}
+		{{#link-to 'articles.new' class='ui-button'}}Uusi artikkeli{{/link-to}}
+	{{/if}}
+</h1>
 
 {{#memory-scroll key='sepot'}}
 <ul class="article-list">
@@ -9,7 +13,7 @@
 	<li class="{{unless article.released 'unreleased'}}">
 		<article>
 			<h1>{{#link-to 'articles.article' article.id}}{{article.title}}{{/link-to}}
-				{{#if article.id}}
+				{{#if session.isAuthenticated}}
 					<button {{action 'deleteArticle' article}}>x</button>
 				{{/if}}
 			</h1>

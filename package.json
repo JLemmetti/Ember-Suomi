@@ -46,7 +46,8 @@
     "liquid-fire": "0.27.0",
     "loader.js": "^4.0.10",
     "markdown-code-highlighting": "0.1.0",
-    "memory-scroll": "0.2.0"
+    "memory-scroll": "0.2.0",
+    "torii": "0.8.1"
   },
   "engines": {
     "node": ">= 0.12.0"

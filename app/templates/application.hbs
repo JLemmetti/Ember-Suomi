@@ -1,5 +1,14 @@
 <header>
 
+	<p class="loginInfo">
+	{{#if session.isAuthenticated}}
+		Kirjautuneena: {{session.displayName}}
+			<button {{action 'signOut'}}>Sign out</button>
+	{{else}}
+		<button {{action 'signIn' 'twitter'}}>Kirjaudu</button>
+	{{/if}}
+	</p>
+
 	<h1>Ember Suomi</h1>
 	<h2>Sovelluskehys kunnianhimoisten verkkosovellusten kehittämiseen</h2>
 

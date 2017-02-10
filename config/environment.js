@@ -29,6 +29,9 @@ module.exports = function(environment) {
       'style-src': `'self'`,
       'media-src': `'self'`
     },
+    torii: {
+      sessionServiceName: 'session'
+    },
     firebase: {
       apiKey: "AIzaSyA8c9YnuZKMXyrp2Vwdhb5rRrepj7EOWJE",
       authDomain: "ember-suomi-dev.firebaseapp.com",

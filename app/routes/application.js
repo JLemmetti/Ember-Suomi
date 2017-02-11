@@ -15,8 +15,7 @@ export default Ember.Route.extend({
 			this.get('session').open('firebase', {provider}).then(function (data) {
 			console.log(data.currentUser);
 		});
-		},
-			signOut: function () {
+		}, signOut: function () {
 			this.get('session').close();
 		}
 	}

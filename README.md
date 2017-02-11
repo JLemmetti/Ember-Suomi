@@ -1,6 +1,8 @@
 # Ember Suomi
 
-Ember Suomi is a blog that covers things about Ember.js framework and web developement in Finnish.
+Ember Suomi is a blog that covers things about Ember.js framework and overall web developement topics in Finnish.
+
+This project is still very much WIP but you can check the progress of the project at [https://ember-suomi-dev.firebaseapp.com/](https://ember-suomi-dev.firebaseapp.com/).
 
 # How to contribute
 
@@ -16,7 +18,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/JLemmetti/ember-suomi.git` this repository
 * change into the new directory
 * `npm install`
 * `bower install`

@@ -1,39 +1,6 @@
 
-{{remember-document-scroll key='model.id'}}
-<article class="full-article">
-
-	<h1>
-		{{model.article.title}}
-		{{#unless model.article.released}}
-			<span class="unreleased">Ei julkaistu</span>
-		{{/unless}}
-		{{#if session.isAuthenticated}}
-			{{#link-to 'articles.article.edit' model.article.id class='ui-button'}}Muokkaa{{/link-to}}
-		{{/if}}
-	</h1>
-
-	<div class="meta clearfix">
-
-		<figure class="avatar">
-			{{gravatar-image
-			email=model.article.author.email
-			alt=model.article.author.name
-			defaultImage='mm'
-			size=100}}
-		</figure>
-
-		<p>Kirjoittaja {{model.article.author.name}}</p>
-		<p>Julkaistu {{moment-format model.article.published}} ({{moment-from-now model.article.published}})</p>
-		{{#if model.article.updated}}
-			<p>Muokattu {{moment-format model.article.updated}} ({{moment-from-now model.article.updated}})</p>
-		{{/if}}
-
-	</div>
-
-	<p class="lead">{{model.article.lead}}</p>
-
-	{{format-markdown model.article.body}}
-
-	{{outlet}}
-
-</article>
+{{es-article
+	article=model.article
+	author=model.article.author
+	session=session
+}}

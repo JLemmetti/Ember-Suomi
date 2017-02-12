@@ -1,0 +1,37 @@
+
+{{remember-document-scroll key='article.id'}}
+<article class="full-article">
+
+	<h1>
+		{{article.title}}
+		{{#unless article.released}}
+			<span class="unreleased">Ei julkaistu</span>
+		{{/unless}}
+		{{#if session.isAuthenticated}}
+			{{#link-to 'articles.article.edit' article.id class='ui-button'}}Muokkaa{{/link-to}}
+		{{/if}}
+	</h1>
+
+	<div class="meta clearfix">
+
+		<figure class="avatar">
+			{{gravatar-image
+			email=author.email
+			alt=author.name
+			defaultImage='mm'
+			size=100}}
+		</figure>
+
+		<p>Kirjoittaja {{author.name}}</p>
+		<p>Julkaistu {{moment-format article.published}} ({{moment-from-now article.published}})</p>
+		{{#if article.updated}}
+			<p>Muokattu {{moment-format article.updated}} ({{moment-from-now article.updated}})</p>
+		{{/if}}
+
+	</div>
+
+	<p class="lead">{{article.lead}}</p>
+
+	{{format-markdown article.body}}
+
+</article>

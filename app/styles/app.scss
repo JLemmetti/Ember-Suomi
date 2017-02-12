@@ -273,7 +273,6 @@ article {
 
 .author-list {
 	max-width: 95%;
-	background-color: rgba(0, 0, 0, .05);
 	list-style-type: none;
 	padding: 20px 30px;
 	margin: 50px auto;
@@ -281,6 +280,12 @@ article {
 	li {
 		margin: 0 0 40px;
 	}
+
+}
+
+.author-bio {
+	background-color: rgba(0, 0, 0, .05);
+	padding: 15px 10px;
 
 	h1 {
 		margin: 20px 0 0 180px;

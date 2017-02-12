@@ -1,0 +1,33 @@
+<section class="author-bio clearfix">
+
+	<figure class="avatar">
+		{{gravatar-image
+		email=author.email
+		alt=author.name
+		defaultImage='mm'
+		size=150
+		retina=true}}
+	</figure>
+
+	<h1>{{author.name}}
+		{{#if session.isAuthenticated}}
+			<button {{action 'deleteAuthor' author}}>x</button>
+			{{#link-to 'authors.author.edit' author.id class='ui-button'}}Muokkaa{{/link-to}}
+		{{/if}}
+	</h1>
+
+	<p class="bio">{{author.bio}}</p>
+
+	<div class="meta">
+		{{#if author.twitter}}
+			<p><a href="https://twitter.com/{{author.twitter}}">{{author.twitter}}</a></p>
+		{{/if}}
+		{{#if author.email}}
+			<p><a href="mailto:{{author.email}}">{{author.email}}</a></p>
+		{{/if}}
+		{{#if author.github}}
+			<p><a href="https://github.com/{{author.github}}">Github</a></p>
+		{{/if}}
+	</div>
+
+</section>

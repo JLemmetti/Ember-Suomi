@@ -141,6 +141,36 @@ main {
 	}
 }
 
+.preview-menu {
+	list-style-type: none;
+	margin: 0 0 20px;
+	padding: 0;
+
+	li {
+		float: left;
+		width: 50%;
+		text-align: center;
+
+		a {
+			color: #555;
+			font-size: 22px;
+			line-height: 30px;
+
+			&.active {
+				display: inline-block;
+				width: 100%;
+				border-bottom: 5px solid $main-theme-color;
+			}
+
+			&:focus {
+				outline: none;
+				background-color: rgba(0, 0, 0, .05);
+			}
+		}
+
+	}
+}
+
 .new-article {
 	max-width: 800px;
 	margin: 0 auto;

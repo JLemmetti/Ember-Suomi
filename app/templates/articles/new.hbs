@@ -1,29 +1,53 @@
-<form class="new-article" {{action 'saveArticle' model.article on='submit'}}>
+{{#ivy-tabs selection=selection as |tabs|}}
 
-	<input type="submit" value="Tallenna">
+	{{#tabs.tablist as |tablist|}}
+	<ul class="preview-menu clearfix" role="presentation">
+		<li role="presentation">
+			{{#tablist.tab "Edit" on-select=(action (mut selection))}}Muokkaus{{/tablist.tab}}
+		</li>
+		<li role="presentation">
+			{{#tablist.tab "Preview" on-select=(action (mut selection))}}Esikatselu{{/tablist.tab}}
+		</li>
+	</ul>
+	{{/tabs.tablist}}
 
-	<label>Julkaistu</label>
-	{{input type='checkbox' checked=model.article.released}}
+	{{#tabs.tabpanel "Edit"}}
 
-	<label>Otsikko</label>
-	{{input value=model.article.title}}
+	<form class="new-article" {{action 'saveArticle' model.article on='submit'}}>
 
-	<label>Kirjoittaja</label>
-	{{#power-select
-	options=model.authors
-	selected=model.article.author
-	onchange=(action 'selectAuthor') as |author|}}
-		{{author.name}}
-	{{/power-select}}
+		<input type="submit" value="Tallenna">
 
-	<label>Ingressi</label>
-	{{textarea cols=100 rows=4 value=model.article.lead}}
+		<label>Julkaistu</label>
+		{{input type='checkbox' checked=model.article.released}}
 
-	<label>Teksti</label>
-	{{textarea cols=100 rows=40 value=model.article.body}}
+		<label>Otsikko</label>
+		{{input value=model.article.title}}
 
-	<input type="submit" value="Tallenna">
+		<label>Kirjoittaja</label>
+		{{#power-select
+		options=model.authors
+		selected=model.article.author
+		onchange=(action 'selectAuthor') as |author|}}
+			{{author.name}}
+		{{/power-select}}
 
-</form>
+		<label>Ingressi</label>
+		{{textarea cols=100 rows=4 value=model.article.lead}}
 
-{{outlet}}
+		<label>Teksti</label>
+		{{textarea cols=100 rows=40 value=model.article.body}}
+
+		<input type="submit" value="Tallenna">
+
+	</form>
+
+	{{/tabs.tabpanel}}
+
+	{{#tabs.tabpanel "Preview"}}
+	{{es-article
+		article=model.article
+		author=model.article.author
+	}}
+	{{/tabs.tabpanel}}
+
+{{/ivy-tabs}}

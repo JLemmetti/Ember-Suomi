@@ -43,6 +43,7 @@
     "ember-power-select": "1.4.3",
     "ember-resolver": "^2.0.3",
     "emberfire": "2.0.6",
+    "ivy-tabs": "3.1.0",
     "liquid-fire": "0.27.0",
     "loader.js": "^4.0.10",
     "markdown-code-highlighting": "0.1.0",

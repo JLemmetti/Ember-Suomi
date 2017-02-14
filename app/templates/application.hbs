@@ -2,13 +2,9 @@
 
 	<p class="loginInfo">
 	{{#if session.isAuthenticated}}
-		Kirjautuneena: {{session.displayName}}
-			<button {{action 'signOut'}}>Sign out</button>
-	{{else}}
-		<button {{action 'signIn' 'twitter'}}>Kirjaudu</button>
+		Kirjautuneena: {{session.displayName}} <button {{action 'signOut'}}>Kirjaudu ulos</button>
 	{{/if}}
 	</p>
-
 
 	<a href="/" class="logo"><img src="images/es.svg" alt="Ember Suomi logo"></a>
 
@@ -45,6 +41,12 @@
 	</nav>
 
 	<small>This page is unaffiliated with the Ember project. Ember is a trademark of Tilde Inc</small>
+
+	<p class="loginInfo">
+	{{#unless session.isAuthenticated}}
+		<button {{action 'signIn' 'twitter'}}>Kirjaudu</button>
+	{{/unless}}
+	</p>
 
 </footer>
 

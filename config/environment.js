@@ -32,13 +32,6 @@ module.exports = function(environment) {
     torii: {
       sessionServiceName: 'session'
     },
-    firebase: {
-      apiKey: "AIzaSyA8c9YnuZKMXyrp2Vwdhb5rRrepj7EOWJE",
-      authDomain: "ember-suomi-dev.firebaseapp.com",
-      databaseURL: "https://ember-suomi-dev.firebaseio.com",
-      storageBucket: "ember-suomi-dev.appspot.com",
-      messagingSenderId: "995971842197"
-    },
     moment: {
       allowEmpty: true,
       outputFormat: 'L',
@@ -53,6 +46,14 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    ENV.firebase = {
+      apiKey: "AIzaSyA8c9YnuZKMXyrp2Vwdhb5rRrepj7EOWJE",
+      authDomain: "ember-suomi-dev.firebaseapp.com",
+      databaseURL: "https://ember-suomi-dev.firebaseio.com",
+      storageBucket: "ember-suomi-dev.appspot.com",
+      messagingSenderId: "995971842197"
+    };
   }
 
   if (environment === 'test') {
@@ -67,7 +68,13 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.firebase = {
+      apiKey: "AIzaSyCfKQDpWd7kHO6vLO4EIOM8a77xL2iCNUw",
+      authDomain: "ember-suomi.firebaseapp.com",
+      databaseURL: "https://ember-suomi.firebaseio.com",
+      storageBucket: "ember-suomi.appspot.com",
+      messagingSenderId: "52897581128"
+    };
   }
 
   return ENV;

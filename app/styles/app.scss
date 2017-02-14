@@ -316,7 +316,6 @@ article {
 
 footer {
 	clear: both;
-	height: 100px;
 	background-color: $footer-bg-color;
 	color: $footer-link-color;
 	padding: 30px 40px;
@@ -343,6 +342,11 @@ footer {
 	.logo {
 		float: right;
 		width: 50px;
+	}
+
+	small {
+		float: left;
+		clear: both;
 	}
 }
 

@@ -1,7 +1,7 @@
 
 <h1>Artikkelit
 	{{#if session.isAuthenticated}}
-		{{#link-to 'articles.new' class='ui-button'}}Uusi artikkeli{{/link-to}}
+		{{link-to 'Uusi artikkeli' 'articles.new' class='ui-button'}}
 	{{/if}}
 </h1>
 
@@ -12,11 +12,7 @@
 
 	<li class="{{unless article.released 'unreleased'}}">
 		<article>
-			<h1>{{#link-to 'articles.article' article.id}}{{article.title}}{{/link-to}}
-				{{#if session.isAuthenticated}}
-					<button {{action 'deleteArticle' article}}>x</button>
-				{{/if}}
-			</h1>
+			<h1>{{#link-to 'articles.article' article.id}}{{article.title}}{{/link-to}}</h1>
 			<p class="date">{{moment-format article.published}}</p>
 			<p>{{article.author.name}}</p>
 			<p>{{article.lead}}</p>

@@ -15,7 +15,9 @@
 
 	<form class="new-article" {{action 'saveArticle' model.article on='submit'}}>
 
-		<input type="submit" value="Tallenna">
+		{{#unless model.article.isNew}}
+			<button {{action 'deleteArticle' model.article}} class="delete">Poista</button>
+		{{/unless}}
 
 		<label>Julkaistu</label>
 		{{input type='checkbox' checked=model.article.released}}

@@ -67,8 +67,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.APP.remoteDB = 'ember_suomi';
-    ENV.APP.localDB = 'local_pouch';
+
   }
 
   return ENV;

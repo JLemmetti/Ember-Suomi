@@ -1,9 +1,9 @@
 {
   "name": "ember-suomi",
   "version": "0.0.0",
-  "description": "Small description for ember-suomi goes here",
+  "description": "A blog about Ember.js framework in Finnish",
   "license": "MIT",
-  "author": "",
+  "author": "Jurkka Lemmetti",
   "directories": {
     "doc": "doc",
     "test": "tests"

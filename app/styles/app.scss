@@ -161,6 +161,10 @@ main {
 				border-bottom: 5px solid $main-theme-color;
 			}
 
+			&:hover {
+				text-decoration: none;
+			}
+
 			&:focus {
 				outline: none;
 				background-color: rgba(0, 0, 0, .05);
@@ -176,8 +180,28 @@ main {
 
 	label {
 		display: block;
+		width: 95%;
 		font-size: 20px;
-		margin: 20px 0 5px;
+		line-height: 1.5;
+		margin: 20px auto 0;
+	}
+
+	input[type='checkbox'] {
+		margin: 0;
+		height: 25px;
+		width: 25px;
+		vertical-align: text-top;
+	}
+
+	input[type='text'],
+	textarea {
+		display: block;
+		width: 100%;
+	}
+
+	input[type='submit'] {
+		float: right;
+		margin: 20px 2% 0 0;
 	}
 }
 

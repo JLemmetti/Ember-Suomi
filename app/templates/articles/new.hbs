@@ -19,25 +19,31 @@
 			<button {{action 'deleteArticle' model.article}} class="delete">Poista</button>
 		{{/unless}}
 
-		<label>Julkaistu</label>
-		{{input type='checkbox' checked=model.article.released}}
+		<label>Julkaistu
+			{{input type='checkbox' checked=model.article.released}}
+		</label>
 
-		<label>Otsikko</label>
-		{{input value=model.article.title}}
+		<label>Otsikko
+			{{input value=model.article.title}}
+		</label>
 
-		<label>Kirjoittaja</label>
-		{{#power-select
-		options=model.authors
-		selected=model.article.author
-		onchange=(action 'selectAuthor') as |author|}}
-			{{author.name}}
-		{{/power-select}}
+		<label>Kirjoittaja
+			{{#power-select
+			options=model.authors
+			selected=model.article.author
+			onchange=(action 'selectAuthor') as |author|}}
+				{{author.name}}
+			{{/power-select}}
+		</label>
 
-		<label>Ingressi</label>
-		{{textarea cols=100 rows=4 value=model.article.lead}}
 
-		<label>Teksti</label>
-		{{textarea cols=100 rows=40 value=model.article.body}}
+		<label>Ingressi
+			{{textarea rows=4 value=model.article.lead}}
+		</label>
+
+		<label>Teksti
+			{{textarea rows=40 value=model.article.body}}
+		</label>
 
 		<input type="submit" value="Tallenna">
 

@@ -2,7 +2,7 @@
 
 	<p class="loginInfo">
 	{{#if session.isAuthenticated}}
-		Kirjautuneena: {{session.displayName}} <button {{action 'signOut'}}>Kirjaudu ulos</button>
+		Kirjautuneena: {{session.email}} <button {{action 'signOut'}}>Kirjaudu ulos</button>
 	{{/if}}
 	</p>
 
@@ -44,7 +44,9 @@
 
 	<p class="loginInfo">
 	{{#unless session.isAuthenticated}}
-		<button {{action 'signIn' 'twitter'}}>Kirjaudu</button>
+		<label>Sähköposti: {{input value=email}}</label>
+		<label>salasana: {{input type='password' value=password}}</label>
+		<button {{action 'signIn' 'password'}}>Kirjaudu</button>
 	{{/unless}}
 	</p>
 

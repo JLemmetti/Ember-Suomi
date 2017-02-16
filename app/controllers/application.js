@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
 				password = this.get('password');
 
 			this.get('session').open('firebase', {provider, email, password}).then(function (data) {
-				console.log(data.currentUser);
+				console.log(data);
 			});
 		},
 		signOut: function () {

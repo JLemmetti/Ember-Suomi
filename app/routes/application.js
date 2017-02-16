@@ -6,7 +6,7 @@ export default Ember.Route.extend({
 		header.push('Ember Suomi');
 		return header.join(' - ');
 	},
-	beforeModel: function() {
+	beforeModel () {
 		return this.get('session').fetch().catch(function() {});
 	}
 });

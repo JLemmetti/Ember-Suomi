@@ -9,7 +9,6 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function () {
-
   this.route('articles', function () {
     this.route('new');
     this.route('article', {path: ':id'}, function () {
@@ -28,6 +27,7 @@ Router.map(function () {
   this.route('about');
   this.route('snippets');
   this.route('login');
+  this.route('user');
 });
 
 export default Router;

@@ -264,7 +264,8 @@ article {
 	margin: 0 auto;
 
 	label,
-	input[type='text'] {
+	input[type='text'],
+	p {
 		margin: 5px 0;
 		height: 30px;
 	}
@@ -276,10 +277,10 @@ article {
 		line-height: 30px;
 	}
 
-	input[type='text'] {
+	input[type='text'],
+	p {
 		float: left;
-
-		// line-height: 1.5;
+		line-height: 30px;
 	}
 
 	textarea {
@@ -288,9 +289,12 @@ article {
 		max-width: 90%;
 	}
 
-	input[type='submit'] {
+	.reset {
 		float: left;
-		clear: left;
+	}
+
+	input[type='submit'] {
+		float: right;
 	}
 }
 
@@ -387,6 +391,7 @@ a {
 }
 
 button,
+input[type='button'],
 input[type='submit'],
 .ui-button {
 	vertical-align: middle;

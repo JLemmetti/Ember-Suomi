@@ -2,7 +2,13 @@
 
 	<p class="loginInfo">
 	{{#if session.isAuthenticated}}
-		Kirjautuneena: {{link-to session.email 'user'}} <button {{action 'signOut'}}>Kirjaudu ulos</button>
+		Kirjautuneena:
+			{{#if model.name}}
+				{{link-to model.name 'user'}}
+			{{else}}
+				{{link-to session.email 'user'}}
+			{{/if}}
+			<button {{action 'signOut'}}>Kirjaudu ulos</button>
 	{{/if}}
 	</p>
 

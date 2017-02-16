@@ -17,6 +17,22 @@ body {
 
 		.loginInfo {
 			float: right;
+			height: 50px;
+
+			p {
+				float: left;
+				line-height: 50px;
+				margin: 0;
+			}
+
+			.avatar {
+				display: inline;
+				margin: 0 10px;
+			}
+
+			.signOut {
+				margin: 0 0 25px;
+			}
 		}
 
 		.logo {
@@ -310,6 +326,13 @@ article {
 
 }
 
+.avatar {
+	img {
+		border: 1px solid rgba(0, 0, 0, .1);
+		border-radius: 50%;
+	}
+}
+
 .author-bio {
 	background-color: rgba(0, 0, 0, .05);
 	padding: 15px 10px;
@@ -321,11 +344,6 @@ article {
 	.avatar {
 		float: left;
 		margin: 0 5px;
-
-		img {
-			border: 1px solid rgba(0, 0, 0, .1);
-			border-radius: 50%;
-		}
 	}
 
 	.bio {

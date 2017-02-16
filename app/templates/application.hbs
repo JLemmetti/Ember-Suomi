@@ -1,16 +1,29 @@
 <header>
 
-	<p class="loginInfo">
 	{{#if session.isAuthenticated}}
-		Kirjautuneena:
+
+	<div class="loginInfo">
+		<p>Kirjautuneena:
 			{{#if model.name}}
 				{{link-to model.name 'user'}}
 			{{else}}
 				{{link-to session.email 'user'}}
 			{{/if}}
-			<button {{action 'signOut'}}>Kirjaudu ulos</button>
+		</p>
+
+		<figure class="avatar">
+			{{gravatar-image
+			email=model.email
+			alt=model.name
+			defaultImage='mm'
+			size=40
+			retina=true}}
+		</figure>
+
+		<button {{action 'signOut'}} class="signOut">Kirjaudu ulos</button>
+
+	</div>
 	{{/if}}
-	</p>
 
 	<a href="/" class="logo"><img src="/images/es.svg" alt="Ember Suomi logo"></a>
 

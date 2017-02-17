@@ -69,6 +69,10 @@ pre {
 		color: $main-nav-link-color;
 		font-size: 22px;
 		margin: 0 30px 0 0;
+
+		&.active {
+			text-decoration: underline;
+		}
 	}
 }
 

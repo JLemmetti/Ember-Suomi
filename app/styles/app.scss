@@ -285,7 +285,8 @@ article {
 
 	label,
 	input[type='text'],
-	p {
+	p,
+	.example {
 		margin: 5px 0;
 		height: 30px;
 	}
@@ -298,9 +299,17 @@ article {
 	}
 
 	input[type='text'],
-	p {
+	p,
+	.example {
 		float: left;
 		line-height: 30px;
+	}
+
+	.example {
+		color: #777;
+		font-size: 15px;
+		line-height: 30px;
+		margin-left: 10px;
 	}
 
 	textarea {

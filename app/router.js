@@ -17,16 +17,12 @@ Router.map(function () {
   });
 
   this.route('authors', function () {
-    this.route('new');
-    this.route('author', {path: ':id'}, function () {
-      this.route('edit');
-    });
+    this.route('author', {path: ':id'}, function () {});
   });
 
 
   this.route('about');
   this.route('snippets');
-  this.route('login');
   this.route('user');
 });
 

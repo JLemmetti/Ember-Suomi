@@ -1,8 +1,7 @@
-<h1>Artikkelit
-	{{#if session.isAuthenticated}}
-		{{link-to 'Uusi artikkeli' 'articles.new' class='ui-button'}}
-	{{/if}}
-</h1>
+
+{{#if session.isAuthenticated}}
+	{{link-to 'Uusi artikkeli' 'articles.new' class='ui-button'}}
+{{/if}}
 
 {{#memory-scroll key='sepot'}}
 <ul class="article-list">

@@ -1,0 +1,26 @@
+<h1>Artikkelit
+	{{#if session.isAuthenticated}}
+		{{link-to 'Uusi artikkeli' 'articles.new' class='ui-button'}}
+	{{/if}}
+</h1>
+
+{{#memory-scroll key='sepot'}}
+<ul class="article-list">
+
+	{{#each articles as |article index|}}
+
+	<li class="{{unless article.released 'unreleased'}}">
+		<article>
+			<h1>{{#link-to 'articles.article' article.id}}{{article.title}}{{/link-to}}</h1>
+			<p class="date">{{moment-format article.published}}</p>
+			<p>{{article.author.name}}</p>
+			<p>{{article.lead}}</p>
+		</article>
+	</li>
+
+	{{else}}
+	<p>Ei artikkeleita :(</p>
+	{{/each}}
+
+</ul>
+{{/memory-scroll}}

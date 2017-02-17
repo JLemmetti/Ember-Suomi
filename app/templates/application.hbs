@@ -61,13 +61,13 @@
 
 	<small>This page is unaffiliated with the Ember project. Ember is a trademark of Tilde Inc</small>
 
-	<p class="loginInfo">
 	{{#unless session.isAuthenticated}}
+	<form class="loginInfo" {{action 'signIn' 'password' on='submit'}}>
 		<label>Sähköposti: {{input value=email}}</label>
 		<label>salasana: {{input type='password' value=password}}</label>
-		<button {{action 'signIn' 'password'}}>Kirjaudu</button>
+		<input type="submit" value="Kirjaudu">
+	</form>
 	{{/unless}}
-	</p>
 
 </footer>
 

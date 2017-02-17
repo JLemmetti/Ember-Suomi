@@ -3,6 +3,7 @@ import KeyboardShortcuts from 'ember-keyboard-shortcuts/mixins/route';
 
 export default Ember.Route.extend(KeyboardShortcuts, {
 	titleToken: 'Muokkaa artikkelia',
+
 	renderTemplate () {
 		this._super(...arguments);
 		this.render('articles/new', {
@@ -19,11 +20,6 @@ export default Ember.Route.extend(KeyboardShortcuts, {
 		quickSave () {
 			this.send('saveArticle', this.controllerFor('articles.article').get('model.article'));
 		},
-		deleteArticle (article) {
-			article.deleteRecord();
-			article.save();
-			this.transitionTo('articles');
-		}
 	},
 	keyboardShortcuts: {
 		'mod+s': {

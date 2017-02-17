@@ -13,11 +13,18 @@
 
 	{{#tabs.tabpanel "Edit"}}
 
-	<form class="new-article" {{action 'saveArticle' model.article on='submit'}}>
-
-		{{#unless model.article.isNew}}
-			<button {{action 'deleteArticle' model.article}} class="delete">Poista</button>
+	{{#unless model.article.isNew}}
+		{{#unless isDeletingArticle}}
+			<button {{action 'confirmDeleteArticle'}} class="delete">Poista</button>
+		{{else}}
+			<p>Haluatko varmasti poistaa artikkelin?
+				<button {{action 'cancelArticleDeletion'}}>Peruuta</button>
+				<button {{action 'deleteArticle' model.article}} class="delete">Poista</button>
+			</p>
 		{{/unless}}
+	{{/unless}}
+
+	<form class="new-article" {{action 'saveArticle' model.article on='submit'}}>
 
 		<label>Julkaistu
 			{{input type='checkbox' checked=model.article.released}}

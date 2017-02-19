@@ -25,9 +25,9 @@
 	</div>
 	{{/if}}
 
-	<a href="/" class="logo"><img src="/images/es.svg" alt="Ember Suomi logo"></a>
+	{{#link-to 'index' class='logo'}}<img src="/images/es.svg" alt="Ember Suomi logo">{{/link-to}}
 
-	<h1><a href="/">Ember Suomi</a></h1>
+	<h1>{{#link-to 'index'}}Ember Suomi{{/link-to}}</h1>
 	<h2>Sovelluskehys kunnianhimoisten verkkosovellusten kehittämiseen</h2>
 
 	<nav class="main-nav">

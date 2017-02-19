@@ -24,6 +24,7 @@ Router.map(function () {
   this.route('about');
   this.route('user');
   this.route('page-not-found', {path: '/*wildcard'});
+  this.route('resources');
 });
 
 export default Router;

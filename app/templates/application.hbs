@@ -48,7 +48,7 @@
 
 <footer class="clearfix">
 
-	<a href="/" class="logo"><img src="/images/es.svg" alt="Ember Suomi logo"></a>
+	<div class="logo" {{action 'toggleLoginForm'}}><img src="/images/es.svg" alt="Ember Suomi logo"></div>
 
 	<nav>
 		<ul>
@@ -62,11 +62,13 @@
 	<small>This page is unaffiliated with the Ember project. Ember is a trademark of Tilde Inc</small>
 
 	{{#unless session.isAuthenticated}}
+	{{#if loginFormVisible}}
 	<form class="loginInfo" {{action 'signIn' 'password' on='submit'}}>
 		<label>Sähköposti: {{input value=email}}</label>
 		<label>salasana: {{input type='password' value=password}}</label>
 		<input type="submit" value="Kirjaudu">
 	</form>
+	{{/if}}
 	{{/unless}}
 
 </footer>

@@ -22,7 +22,6 @@ Router.map(function () {
 
 
   this.route('about');
-  this.route('snippets');
   this.route('user');
   this.route('page-not-found', {path: '/*wildcard'});
 });

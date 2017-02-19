@@ -9,6 +9,10 @@ export default Ember.Route.extend(KeyboardShortcuts, {
 			authors: this.store.findAll('author')
 		});
 	},
+	afterModel (model) {
+		// Preselect logged in user as author for the new article
+		model.article.set('author', this.modelFor('application'));
+	},
 	renderTemplate () {
 		this._super(...arguments);
 		this.render('articles/new', {

@@ -279,16 +279,17 @@ article {
 }
 
 .new-author {
-	max-width: 80%;
+	max-width: 95%;
 	padding: 50px 0;
 	margin: 0 auto;
 
 	label,
 	input[type='text'],
 	p,
-	.example {
+	.legend {
 		margin: 5px 0;
 		height: 30px;
+		width: 270px;
 	}
 
 	label {
@@ -300,16 +301,20 @@ article {
 
 	input[type='text'],
 	p,
-	.example {
+	.legend {
 		float: left;
 		line-height: 30px;
 	}
 
-	.example {
+	.legend {
 		color: #777;
 		font-size: 15px;
 		line-height: 30px;
 		margin-left: 10px;
+
+		a {
+			color: #333;
+		}
 	}
 
 	textarea {

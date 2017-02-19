@@ -4,13 +4,13 @@
 	{{input size=30 value=model.name}}
 
 	<label>Twitter</label>
-	{{input size=30 value=model.twitter}} <span class="example">https://twitter.com/{{model.twitter}}</span>
+	{{input size=30 value=model.twitter}} <span class="legend">https://twitter.com/{{model.twitter}}</span>
 
 	<label>Github</label>
-	{{input size=30 value=model.github}} <span class="example">https://github.com/{{model.github}}</span>
+	{{input size=30 value=model.github}} <span class="legend">https://github.com/{{model.github}}</span>
 
 	<label>Sähköposti</label>
-	<p>{{session.email}}</p>
+	<p>{{session.email}}</p> <span class="legend">Käytetään <a href="https://gravatar.com/">Gravatar-kuvan</a> hakemiseen</span>
 
 	{{!-- <label>Firebase UID</label>
 	<p>{{session.uid}}</p> --}}

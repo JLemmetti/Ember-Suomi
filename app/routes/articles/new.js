@@ -19,6 +19,15 @@ export default Ember.Route.extend(KeyboardShortcuts, {
 			into: 'application'
 		});
 	},
+	deactivate () {
+		// Delete the new article if the author browses away from the page before
+		// saving it
+		let article = this.controllerFor('articles.new').get('model.article');
+
+		if (article.get('isNew')) {
+		    article.deleteRecord();
+		}
+	},
 	actions: {
 		saveArticle (article) {
 

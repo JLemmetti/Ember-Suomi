@@ -11,6 +11,12 @@ export default Ember.Route.extend(KeyboardShortcuts, {
 			controller: this.controllerFor('articles.article')
 		});
 	},
+	deactivate () {
+		// Reset the article controller
+		let article = this.controllerFor('articles.article');
+
+		article.set('isDeletingArticle', false);
+	},
 	actions: {
 		saveArticle (article) {
 			article.set('updated', new Date());

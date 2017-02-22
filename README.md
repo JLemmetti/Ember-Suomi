@@ -1,6 +1,6 @@
 # Ember Suomi
 
-(Ember Suomi)[https://embersuomi.fi] is a blog that covers things about Ember.js framework and overall web developement topics in Finnish. This page is unaffiliated with the Ember project. Ember is a trademark of Tilde Inc.
+[Ember Suomi](https://embersuomi.fi) is a blog that covers things about Ember.js framework and overall web developement topics in Finnish. This page is unaffiliated with the Ember project. Ember is a trademark of Tilde Inc.
 
 The development version of this project can be found at [https://ember-suomi-dev.firebaseapp.com/](https://ember-suomi-dev.firebaseapp.com/).
 

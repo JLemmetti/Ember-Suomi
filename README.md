@@ -40,4 +40,6 @@ You will need the following things properly installed on your computer.
 
 ### Deploying
 
-`Firebase deploy`
+`firebase use <project>` (`default` for development version or `production` for production)
+
+`firebase deploy`

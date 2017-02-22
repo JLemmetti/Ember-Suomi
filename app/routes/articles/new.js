@@ -25,7 +25,7 @@ export default Ember.Route.extend(KeyboardShortcuts, {
 		let article = this.controllerFor('articles.new').get('model.article');
 
 		if (article.get('isNew')) {
-		    article.deleteRecord();
+			article.deleteRecord();
 		}
 	},
 	actions: {

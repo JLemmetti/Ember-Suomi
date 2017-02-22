@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "ember-suomi-dev"
+    "default": "ember-suomi-dev",
+    "production": "ember-suomi"
   }
 }

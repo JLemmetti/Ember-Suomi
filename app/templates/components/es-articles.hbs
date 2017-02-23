@@ -12,8 +12,8 @@
 		<article>
 			<h1>{{#link-to 'articles.article' article.id}}{{article.title}}{{/link-to}}</h1>
 			<p class="date">{{moment-format article.published}}</p>
-			<p>{{article.author.name}}</p>
-			<p>{{article.lead}}</p>
+			<p class="author">{{article.author.name}}</p>
+			<p class="lead">{{article.lead}}</p>
 		</article>
 	</li>
 

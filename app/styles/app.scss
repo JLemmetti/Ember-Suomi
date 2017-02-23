@@ -195,7 +195,7 @@ main {
 	}
 
 	h1 {
-		margin: 20px auto 0;
+		margin: 20px auto 5px;
 
 		a {
 			color: #444;
@@ -207,7 +207,15 @@ main {
 	}
 
 	.date {
-		font-size: 14px;
+		float: left;
+		color: #555;
+		text-indent: 5px;
+		margin-right: 10px;
+	}
+
+	.lead {
+		font-size: 18px;
+		margin: 5px 0 0;
 	}
 }
 

@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
 			let email = this.get('email'),
 				password = this.get('password');
 
-			this.get('session').open('firebase', {provider, email, password}).then(function (data) {
+			this.get('session').open('firebase', {provider, email, password}).then(function () {
 
 			});
 		},

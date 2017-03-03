@@ -17,7 +17,7 @@ export default Ember.Route.extend({
 			'og:description': model.article.get('lead'),
 			'og:title': model.article.get('title'),
 			'og:article:published_time': model.article.get('published').toISOString()
-		}
+		};
 
 		if (model.article.get('updated')) {
 			meta['og:article:modified_time'] = model.article.get('updated').toISOString();

@@ -28,12 +28,24 @@ export default Ember.Route.extend(KeyboardShortcuts, {
 			article.deleteRecord();
 		}
 	},
+	createSlug (title) {
+		return title.toString().toLowerCase().trim()
+			.replace(/\s+/g, '-') // Replace spaces with -
+			.replace(/\-\-+/g, '-') // Replace multiple - with single -
+			.replace(/ä/g, 'a')
+			.replace(/ö/g, 'o')
+			.replace(/&/g, 'ja') // Replace '&'' with 'ja'
+			.replace(/[\s\W-]+/g, '-'); // Replace all non-word chars with -
+	},
+
 	actions: {
 		saveArticle (article) {
 
 			let author = article.get('author');
 
 			article.set('author', author);
+
+			article.set('slug', this.createSlug(article.get('title')));
 
 			article.save()
 				.then(article => this.transitionTo('articles.article', article.id));

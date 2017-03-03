@@ -17,9 +17,23 @@ export default Ember.Route.extend(KeyboardShortcuts, {
 
 		article.set('isDeletingArticle', false);
 	},
+	createSlug (title) {
+		return title.toString().toLowerCase().trim()
+			.replace(/\s+/g, '-') // Replace spaces with -
+			.replace(/\-\-+/g, '-') // Replace multiple - with single -
+			.replace(/ä/g, 'a')
+			.replace(/ö/g, 'o')
+			.replace(/&/g, 'ja') // Replace '&'' with 'ja'
+			.replace(/[\s\W-]+/g, '-'); // Replace all non-word chars with -
+	},
+
 	actions: {
 		saveArticle (article) {
+
 			article.set('updated', new Date());
+
+			article.set('slug', this.createSlug(article.get('title')));
+
 			article.save()
 			.then(this.transitionTo('articles.article'));
 		},

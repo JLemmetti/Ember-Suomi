@@ -11,5 +11,6 @@ export default DS.Model.extend({
 		}
 	}),
 	updated: DS.attr('date'),
-	released: DS.attr('boolean', {defaultValue: false})
+	released: DS.attr('boolean', {defaultValue: false}),
+	slug: DS.attr('string')
 });

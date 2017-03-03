@@ -14,11 +14,9 @@ export default Ember.Route.extend({
 
 		let meta = {
 			description: model.article.get('lead'),
-			'og:site_name': 'Ember Suomi',
 			'og:description': model.article.get('lead'),
 			'og:title': model.article.get('title'),
-			'og:article:published_time': model.article.get('published').toISOString(),
-			'og:image': '/images/es.png',
+			'og:article:published_time': model.article.get('published').toISOString()
 		}
 
 		if (model.article.get('updated')) {

@@ -1,6 +1,11 @@
 import Ember from 'ember';
 
-export default Ember.Route.extend({
+const {
+	Route,
+	$
+}  = Ember;
+
+export default Route.extend({
 	title (tokens) {
 		let header = tokens.reverse();
 		header.push('Ember Suomi');
@@ -14,5 +19,8 @@ export default Ember.Route.extend({
 			.then(users => {
 				return users.get('firstObject');
 			});
+	},
+	afterModel () {
+		$('.page-placeholder').hide();
 	}
 });

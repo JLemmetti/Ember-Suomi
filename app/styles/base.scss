@@ -35,3 +35,6 @@ button::-moz-focus-inner {border: 0; padding: 0;}
 [aria-hidden="true"] {
   display: none;
 }
+
+$break-large: 800px;
+$break-small: 500px;

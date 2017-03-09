@@ -65,7 +65,7 @@
 	{{#unless session.isAuthenticated}}
 	{{#if loginFormVisible}}
 	<form class="loginInfo" {{action 'signIn' 'password' on='submit'}}>
-		<label>Sähköposti: {{input value=email}}</label>
+		<label>Sähköposti: {{input type='email' value=email}}</label>
 		<label>salasana: {{input type='password' value=password}}</label>
 		<input type="submit" value="Kirjaudu">
 	</form>

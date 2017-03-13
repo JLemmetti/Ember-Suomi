@@ -23,7 +23,7 @@ export default Ember.Route.extend(KeyboardShortcuts, {
 			.replace(/\-\-+/g, '-') // Replace multiple - with single -
 			.replace(/ä/g, 'a')
 			.replace(/ö/g, 'o')
-			.replace(/&/g, 'ja') // Replace '&'' with 'ja'
+			.replace(/&/g, 'ja') // Replace '&' with 'ja'
 			.replace(/[\s\W-]+/g, '-'); // Replace all non-word chars with -
 	},
 
@@ -44,12 +44,11 @@ export default Ember.Route.extend(KeyboardShortcuts, {
 
 			article.set('slug', this.createSlug(article.get('title')));
 
-			article.save()
-			.then(this.transitionTo('articles.article'));
+			article.save().then(this.transitionTo('articles.article'));
 		},
 		quickSave () {
 			this.send('saveArticle', this.controllerFor('articles.article').get('model.article'));
-		},
+		}
 	},
 	keyboardShortcuts: {
 		'mod+s': {

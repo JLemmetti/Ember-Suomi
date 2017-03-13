@@ -11,7 +11,7 @@ export default Ember.Route.extend(KeyboardShortcuts, {
 	},
 	afterModel (model) {
 		// Preselect logged in user as author for the new article
-		model.article.set('author', this.modelFor('application'));
+		model.article.set('author', this.controllerFor('application').get('model'));
 	},
 	renderTemplate () {
 		this._super(...arguments);

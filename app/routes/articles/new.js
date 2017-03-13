@@ -41,9 +41,12 @@ export default Ember.Route.extend(KeyboardShortcuts, {
 	actions: {
 		saveArticle (article) {
 
-			let author = article.get('author');
+			article.set('author', article.get('author'));
 
-			article.set('author', author);
+			// Set the artile to publication date only if it's also set to be released
+			if (article.get('released')) {
+				article.set('published', new Date());
+			}
 
 			article.set('slug', this.createSlug(article.get('title')));
 

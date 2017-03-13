@@ -30,7 +30,17 @@ export default Ember.Route.extend(KeyboardShortcuts, {
 	actions: {
 		saveArticle (article) {
 
-			article.set('updated', new Date());
+			// Set the artile to publication date only if it's set to be released
+			// and it's not released yet
+			if (article.get('released') && !article.get('published')) {
+				article.set('published', new Date());
+			}
+
+			// If the article has been released and it has a publication date,
+			// update the `updated` value with current time
+			if (article.get('released') && article.get('published')) {
+				article.set('updated', new Date());
+			}
 
 			article.set('slug', this.createSlug(article.get('title')));
 

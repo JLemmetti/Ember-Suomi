@@ -23,7 +23,13 @@
 		</figure>
 
 		<p>Kirjoittaja {{author.name}}</p>
-		<p>Julkaistu {{moment-format article.published}} ({{moment-from-now article.published}})</p>
+		<p>
+			{{#if article.released}}
+				Julkaistu {{moment-format article.published}} ({{moment-from-now article.published}})
+			{{else}}
+				Ei julkaistu
+			{{/if}}
+		</p>
 		{{#if article.updated}}
 			<p>Muokattu {{moment-format article.updated}} ({{moment-from-now article.updated}})</p>
 		{{/if}}

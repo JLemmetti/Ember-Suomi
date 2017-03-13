@@ -11,8 +11,10 @@ export default Ember.Controller.extend({
 			let email = this.get('email'),
 				password = this.get('password');
 
-			this.get('session').open('firebase', {provider, email, password}).then(function () {
-
+			// Sign in the user, fetch the user data and set the user as the model for application route
+			this.get('session').open('firebase', {provider, email, password}).then(() => {
+				this.store.query('author', {orderBy: 'firebaseUID', equalTo: this.get('session.uid')})
+				.then(users => this.set('model', users.get('firstObject')));
 			});
 		},
 		signOut: function () {

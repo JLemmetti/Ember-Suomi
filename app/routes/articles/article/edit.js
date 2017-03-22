@@ -1,7 +1,6 @@
 import Ember from 'ember';
-import KeyboardShortcuts from 'ember-keyboard-shortcuts/mixins/route';
 
-export default Ember.Route.extend(KeyboardShortcuts, {
+export default Ember.Route.extend({
 	titleToken: 'Muokkaa artikkelia',
 
 	renderTemplate () {

@@ -26,7 +26,7 @@ module.exports = function(environment) {
       'frame-src': "'self' https://*.firebaseapp.com",
       'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com www.google-analytics.com",
       'img-src': `'self' www.gravatar.com`,
-      'style-src': `'self'`,
+      'style-src': `'self' 'unsafe-inline'`,
       'media-src': `'self'`
     },
     torii: {

@@ -620,11 +620,17 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 textarea {
-	background-color: $input-bg-color;
-	color: $input-text-color;
 	font-size: 16px;
 	padding: 3px 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+.ember-power-select-trigger {
+	background-color: $input-bg-color;
+	color: $input-text-color;
 	border: 2px solid $input-border-color;
 	border-radius: 4px;
 }
-

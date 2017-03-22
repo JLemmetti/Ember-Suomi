@@ -1,4 +1,4 @@
-/* jshint node: true */
+/* eslint-env node */
 /* eslint indent: [2, 2] */
 
 module.exports = function(environment) {

@@ -13,56 +13,24 @@
 
 	{{#tabs.tabpanel "Edit"}}
 
-	{{#unless model.article.isNew}}
-		{{#unless isDeletingArticle}}
-			<button {{action 'confirmDeleteArticle'}} class="delete">Poista</button>
-		{{else}}
-			<p>Haluatko varmasti poistaa artikkelin?
-				<button {{action 'cancelArticleDeletion'}}>Peruuta</button>
-				<button {{action 'deleteArticle' model.article}} class="delete">Poista</button>
-			</p>
-		{{/unless}}
-	{{/unless}}
-
-	<form class="new-article" {{action 'saveArticle' model.article on='submit'}}>
-
-		<label>Julkaistu
-			{{input type='checkbox' checked=model.article.released}}
-		</label>
-
-		<label>Otsikko
-			{{input value=model.article.title}}
-		</label>
-
-		<label>Kirjoittaja
-			{{#power-select
-			options=model.authors
-			selected=model.article.author
-			onchange=(action 'selectAuthor') as |author|}}
-				{{author.name}}
-			{{/power-select}}
-		</label>
-
-
-		<label>Ingressi
-			{{textarea rows=4 value=model.article.lead}}
-		</label>
-
-		<label>Teksti
-			{{textarea rows=40 value=model.article.body}}
-		</label>
-
-		<input type="submit" value="Tallenna">
-
-	</form>
+		{{es-article-form
+			article=model.article
+			authors=model.authors
+			author=model.article.author
+			action='selectAuthor'
+			submit='saveArticle'
+			deleteArticle='deleteArticle'
+		}}
 
 	{{/tabs.tabpanel}}
 
 	{{#tabs.tabpanel "Preview"}}
-	{{es-article
-		article=model.article
-		author=model.article.author
-	}}
+
+		{{es-article
+			article=model.article
+			author=model.article.author
+		}}
+
 	{{/tabs.tabpanel}}
 
 {{/ivy-tabs}}

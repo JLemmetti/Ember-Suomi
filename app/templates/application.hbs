@@ -48,7 +48,7 @@
 
 <footer class="clearfix">
 
-	<div class="logo" {{action 'toggleAdminPanel' 'showRightSlideMenu'}}><img src="/images/es.svg" alt="Ember Suomi logo"></div>
+	<div class="logo" {{action 'toggleAdminPanel'}}><img src="/images/es.svg" alt="Ember Suomi logo"></div>
 
 	<nav>
 		<ul>
@@ -89,7 +89,7 @@
 			<button {{action 'signOut'}} class="log-out">Kirjaudu ulos</button>
 		{{/unless}}
 
-		<button class="close-button" {{action 'toggleAdminPanel' 'showRightSlideMenu'}}>‎╳</button>
+		<button class="close-button" {{action 'toggleAdminPanel'}}>‎╳</button>
 	</div>
 
 {{/esp-menu}}

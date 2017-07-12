@@ -23,7 +23,7 @@ export default Ember.Controller.extend({
 			this.get('session').close();
 			this.set('showRightSlideMenu', false);
 		},
-		toggleAdminPanel (key) {
+		toggleAdminPanel () {
 			this.toggleProperty('showRightSlideMenu');
 		}
 	}

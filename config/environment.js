@@ -1,10 +1,12 @@
 /* eslint-env node */
 /* eslint indent: [2, 2] */
 
+'use strict';
+
 module.exports = function(environment) {
-  var ENV = {
+  let ENV = {
     modulePrefix: 'ember-suomi',
-    environment: environment,
+    environment,
     rootURL: '/',
     locationType: 'auto',
     EmberENV: {

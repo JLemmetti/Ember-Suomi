@@ -336,6 +336,11 @@ main {
 	max-width: 800px;
 	margin: 0 auto;
 
+	a {
+		margin: 10px 3%;
+		float: right;
+	}
+
 	label {
 		display: block;
 		width: 95%;

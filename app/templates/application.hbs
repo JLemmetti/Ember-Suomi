@@ -20,7 +20,7 @@
 			retina=true}}
 		</figure>
 
-		<button {{action 'signOut'}} class="signOut">Kirjaudu ulos</button>
+		<button {{action 'signOut'}} class="log-out">Kirjaudu ulos</button>
 
 	</div>
 	{{/if}}
@@ -48,7 +48,7 @@
 
 <footer class="clearfix">
 
-	<div class="logo" {{action 'toggleLoginForm'}}><img src="/images/es.svg" alt="Ember Suomi logo"></div>
+	<div class="logo" {{action 'toggleAdminPanel' 'showRightSlideMenu'}}><img src="/images/es.svg" alt="Ember Suomi logo"></div>
 
 	<nav>
 		<ul>
@@ -62,15 +62,34 @@
 
 	<small>This page is unaffiliated with the Ember project. Ember is a trademark of Tilde Inc</small>
 
-	{{#unless session.isAuthenticated}}
-	{{#if loginFormVisible}}
-	<form class="loginInfo" {{action 'signIn' 'password' on='submit'}}>
-		<label>Sähköposti: {{input type='email' value=email}}</label>
-		<label>salasana: {{input type='password' value=password}}</label>
-		<input type="submit" value="Kirjaudu">
-	</form>
-	{{/if}}
-	{{/unless}}
-
 </footer>
 
+{{#esp-menu
+	customClasses='admin-panel'
+	position='right'
+	pushMenu=pushRightMenu
+	open=showRightSlideMenu
+}}
+
+	<div class="container">
+		<h2>Asetukset</h2>
+
+		{{#unless session.isAuthenticated}}
+
+			<form class="login-form" {{action 'signIn' 'password' on='submit'}}>
+
+				<h3>Kirjautuminen</h3>
+
+				<label>Sähköposti: {{input type='email' value=email}}</label>
+				<label>Salasana: {{input type='password' value=password}}</label>
+				<input type="submit" value="Kirjaudu">
+			</form>
+
+		{{else}}
+			<button {{action 'signOut'}} class="log-out">Kirjaudu ulos</button>
+		{{/unless}}
+
+		<button class="close-button" {{action 'toggleAdminPanel' 'showRightSlideMenu'}}>‎╳</button>
+	</div>
+
+{{/esp-menu}}

@@ -42,6 +42,7 @@
     "ember-moment": "7.3.0",
     "ember-power-select": "^1.6.1",
     "ember-resolver": "^4.0.0",
+    "ember-slide-push-menu": "^0.0.4",
     "ember-source": "~2.14.0",
     "emberfire": "^2.0.7",
     "ivy-tabs": "3.1.0",

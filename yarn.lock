@@ -2197,7 +2197,7 @@ ember-cli-babel@^5.0.0, ember-cli-babel@^5.1.5, ember-cli-babel@^5.1.6, ember-cl
     ember-cli-version-checker "^1.0.2"
     resolve "^1.1.2"
 
-ember-cli-babel@^6.0.0, ember-cli-babel@^6.0.0-alpha.8, ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6.1.0, ember-cli-babel@^6.3.0, ember-cli-babel@^6.4.1:
+ember-cli-babel@^6.0.0, ember-cli-babel@^6.0.0-alpha.8, ember-cli-babel@^6.0.0-beta.3, ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.0.0-beta.7, ember-cli-babel@^6.1.0, ember-cli-babel@^6.3.0, ember-cli-babel@^6.4.1:
   version "6.6.0"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-6.6.0.tgz#a8362bc44841bfdf89b389f3197f104d7ba526da"
   dependencies:
@@ -2724,6 +2724,13 @@ ember-runtime-enumerable-includes-polyfill@^2.0.0:
   dependencies:
     ember-cli-babel "^6.0.0"
     ember-cli-version-checker "^1.1.6"
+
+ember-slide-push-menu@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/ember-slide-push-menu/-/ember-slide-push-menu-0.0.4.tgz#d2f9d8a33461cf1a91db89afb5b1bbcccad24de5"
+  dependencies:
+    ember-cli-babel "^6.0.0-beta.3"
+    ember-cli-htmlbars "^1.1.1"
 
 ember-source@~2.14.0:
   version "2.14.0"

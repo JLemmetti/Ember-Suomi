@@ -16,12 +16,15 @@ export default Ember.Controller.extend({
 				this.store.query('author', {orderBy: 'firebaseUID', equalTo: this.get('session.uid')})
 				.then(users => this.set('model', users.get('firstObject')));
 			});
+
+			this.set('showRightSlideMenu', false);
 		},
 		signOut: function () {
 			this.get('session').close();
+			this.set('showRightSlideMenu', false);
 		},
-		toggleLoginForm () {
-			this.set('loginFormVisible', !this.get('loginFormVisible'));
+		toggleAdminPanel (key) {
+			this.toggleProperty('showRightSlideMenu');
 		}
 	}
 });

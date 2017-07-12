@@ -43,7 +43,7 @@ body {
 				margin: 0 10px;
 			}
 
-			.signOut {
+			.log-out {
 				margin: 0 0 25px;
 			}
 		}
@@ -106,6 +106,48 @@ pre {
 		color: #555;
 		font-size: 25px;
 		margin: 10px;
+	}
+}
+
+.admin-panel {
+
+	.container {
+		padding: 0 10px;
+	}
+
+	.close-button {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	}
+
+	h2 {
+		color: #fff;
+		// background-color: #18447e;
+		text-align: center;
+		padding: 20px 0 5px;
+		border-bottom: 3px solid #fff;
+		margin: 0 0 25px;
+	}
+
+	h3 {
+		background-color: transparent;
+		color: #fff;
+		font-size: 20px;
+		padding: 0;
+		margin-bottom: 10px;
+	}
+
+	label {
+		display: block;
+		color: #fff;
+		// padding: 5px 0;
+		line-height: 25px;
+		margin-bottom: 10px;
+	}
+
+	.log-out {
+		display: inline-block;
 	}
 }
 
@@ -192,27 +234,6 @@ main {
 	dd {
 		font-size: 18px;
 		margin: 5px 0 15px;
-	}
-}
-
-.login {
-	max-width: 800px;
-	margin: 50px auto;
-
-	h1 {
-		font-size: 40px;
-		margin: 0 auto 5px;
-	}
-
-	h2 {
-		font-size: 30px;
-		margin: 0 auto 20px;
-	}
-
-	label {
-		display: block;
-		font-size: 20px;
-		margin: 10px auto 2px;
 	}
 }
 
@@ -580,10 +601,6 @@ footer {
 			margin: 20px 0 0;
 		}
 	}
-
-	.loginInfo {
-		float: right;
-	}
 }
 
 a {
@@ -613,6 +630,12 @@ input[type='submit'],
 
 	&:hover {
 		text-decoration: none;
+	}
+
+	&.close-button {
+		background-color: transparent;
+		border: none;
+		padding: 0;
 	}
 }
 

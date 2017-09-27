@@ -36,7 +36,9 @@
 
 	</div>
 
-	<p class="lead">{{article.lead}}</p>
+	<p class="lead">
+		{{format-markdown article.lead}}
+	</p>
 
 	{{format-markdown article.body}}
 

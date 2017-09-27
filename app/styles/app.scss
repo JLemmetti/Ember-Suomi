@@ -441,8 +441,11 @@ main {
 	}
 
 	.lead {
-		font-size: 20px;
-		padding: 15px 0;
+
+		p {
+			font-size: 20px;
+			padding: 15px 0;
+		}
 	}
 }
 

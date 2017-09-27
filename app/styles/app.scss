@@ -402,6 +402,15 @@ main {
 		margin-top: 30px;
 	}
 
+	blockquote {
+		background-color: rgba(24, 68, 126, .1);
+		margin: 0 15px;
+
+		p {
+			padding: 10px 25px;
+		}
+	}
+
 	.unreleased {
 		background-color: #FF5C4A;
 		color: #fff;
